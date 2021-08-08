@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */; };
 		5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107226BFA013006F62A6 /* AppDelegate.swift */; };
 		5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107426BFA013006F62A6 /* SceneDelegate.swift */; };
 		5C82107726BFA013006F62A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107626BFA013006F62A6 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
 		5C82106F26BFA013006F62A6 /* Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82107226BFA013006F62A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C82107426BFA013006F62A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
 				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
+				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
 				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
 			);
 			path = Factory;
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
+				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C82107726BFA013006F62A6 /* ViewController.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
 				5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */,

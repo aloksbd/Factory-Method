@@ -39,9 +39,3 @@ extension EmployeesListView: UITableViewDataSource {
         return cell
     }
 }
-
-final class EmployeeListCell: UITableViewCell {
-    private(set) lazy var nameLabel = UILabel()
-    private(set) lazy var designationLabel = UILabel()
-    private(set) lazy var salaryLabel = UILabel()
-}
