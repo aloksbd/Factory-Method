@@ -25,6 +25,7 @@
 		5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */; };
 		5C94253026C0190900C9996C /* EmployeesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94252F26C0190900C9996C /* EmployeesPresenter.swift */; };
 		5C94253826C0193600C9996C /* EmployeesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */; };
+		5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94253F26C02BC900C9996C /* EmployeesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		5C94253526C0193600C9996C /* FactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesPresenterTests.swift; sourceTree = "<group>"; };
 		5C94253926C0193600C9996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C94253F26C02BC900C9996C /* EmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				5C720CC526BFF0A300C2F4A4 /* Employees Grid View */,
 				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
+				5C94253F26C02BC900C9996C /* EmployeesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			files = (
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
+				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* ViewController.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,

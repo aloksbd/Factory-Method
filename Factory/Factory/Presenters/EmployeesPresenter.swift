@@ -11,9 +11,11 @@ protocol EmployeesRepository {
 
 class EmployeesPresenter {
     private let repository: EmployeesRepository
+    private let employeesView: EmployeesView
     
-    init(repository: EmployeesRepository) {
+    init(repository: EmployeesRepository, employeesView: EmployeesView) {
         self.repository = repository
+        self.employeesView = employeesView
     }
     
     func loadEmployees() {
