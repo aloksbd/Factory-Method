@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EmployeesListView: NSObject {
+final class EmployeesListView: NSObject, EmployeesView {
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self

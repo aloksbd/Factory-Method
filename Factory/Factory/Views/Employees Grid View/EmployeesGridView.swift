@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EmployeesGridView: NSObject {
+final class EmployeesGridView: NSObject, EmployeesView {
     private(set) lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
