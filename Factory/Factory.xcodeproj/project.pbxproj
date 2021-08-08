@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */; };
+		5C720CC426BFF04600C2F4A4 /* EmployeesGridViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CC326BFF04600C2F4A4 /* EmployeesGridViewTests.swift */; };
+		5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CC626BFF0BC00C2F4A4 /* EmployeesGridView.swift */; };
+		5C720CC926BFF1BF00C2F4A4 /* EmployeeGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CC826BFF1BF00C2F4A4 /* EmployeeGridCell.swift */; };
+		5C720CCB26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CCA26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift */; };
 		5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107226BFA013006F62A6 /* AppDelegate.swift */; };
 		5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107426BFA013006F62A6 /* SceneDelegate.swift */; };
 		5C82107726BFA013006F62A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107626BFA013006F62A6 /* ViewController.swift */; };
@@ -33,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
+		5C720CC326BFF04600C2F4A4 /* EmployeesGridViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesGridViewTests.swift; sourceTree = "<group>"; };
+		5C720CC626BFF0BC00C2F4A4 /* EmployeesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesGridView.swift; sourceTree = "<group>"; };
+		5C720CC826BFF1BF00C2F4A4 /* EmployeeGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeGridCell.swift; sourceTree = "<group>"; };
+		5C720CCA26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesGridViewSnapshotTests.swift; sourceTree = "<group>"; };
 		5C82106F26BFA013006F62A6 /* Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82107226BFA013006F62A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C82107426BFA013006F62A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C720CBC26BFEE8900C2F4A4 /* Employees List View */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
+				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
+			);
+			path = "Employees List View";
+			sourceTree = "<group>";
+		};
+		5C720CBD26BFEE9B00C2F4A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C720CBE26BFEEA700C2F4A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C82107626BFA013006F62A6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C720CBF26BFEEC700C2F4A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C720CC526BFF0A300C2F4A4 /* Employees Grid View */,
+				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
+			);
+			path = "Employees List View Tests";
+			sourceTree = "<group>";
+		};
+		5C720CC226BFF01C00C2F4A4 /* Employees Grid View Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5C720CC326BFF04600C2F4A4 /* EmployeesGridViewTests.swift */,
+				5C720CCA26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift */,
+			);
+			path = "Employees Grid View Tests";
+			sourceTree = "<group>";
+		};
+		5C720CC526BFF0A300C2F4A4 /* Employees Grid View */ = {
+			isa = PBXGroup;
+			children = (
+				5C720CC626BFF0BC00C2F4A4 /* EmployeesGridView.swift */,
+				5C720CC826BFF1BF00C2F4A4 /* EmployeeGridCell.swift */,
+			);
+			path = "Employees Grid View";
+			sourceTree = "<group>";
+		};
 		5C82106626BFA013006F62A6 = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +160,12 @@
 			children = (
 				5C82107226BFA013006F62A6 /* AppDelegate.swift */,
 				5C82107426BFA013006F62A6 /* SceneDelegate.swift */,
-				5C82107626BFA013006F62A6 /* ViewController.swift */,
+				5C720CBE26BFEEA700C2F4A4 /* Controllers */,
+				5C720CBF26BFEEC700C2F4A4 /* Views */,
+				5C720CBD26BFEE9B00C2F4A4 /* Models */,
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
-				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
-				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
-				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -105,9 +173,9 @@
 		5C82108B26BFA11A006F62A6 /* FactoryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C720CC226BFF01C00C2F4A4 /* Employees Grid View Tests */,
+				5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */,
 				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
-				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
 			);
 			path = FactoryUITests;
@@ -224,9 +292,11 @@
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C82107726BFA013006F62A6 /* ViewController.swift in Sources */,
+				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
 				5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */,
 				5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */,
+				5C720CC926BFF1BF00C2F4A4 /* EmployeeGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +306,9 @@
 			files = (
 				5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */,
 				5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */,
+				5C720CC426BFF04600C2F4A4 /* EmployeesGridViewTests.swift in Sources */,
 				5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */,
+				5C720CCB26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift in Sources */,
 				5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
