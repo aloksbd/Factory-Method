@@ -31,6 +31,7 @@
 		5C94254926C03B0700C9996C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254826C03B0700C9996C /* Settings.swift */; };
 		5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */; };
 		5C94255D26C04C1F00C9996C /* EmployeesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */; };
+		5C94255F26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewComposer.swift; sourceTree = "<group>"; };
 		5C94255326C04BAA00C9996C /* FactoryMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C94255726C04BAA00C9996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
 				5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */,
+				5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */,
 			);
 			path = FactoryUITests;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			files = (
 				5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */,
 				5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */,
+				5C94255F26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift in Sources */,
 				5C720CC426BFF04600C2F4A4 /* EmployeesGridViewTests.swift in Sources */,
 				5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */,
 				5C720CCB26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift in Sources */,
