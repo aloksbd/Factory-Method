@@ -15,6 +15,17 @@ class EmployeesPresenterTests: XCTestCase {
         
         XCTAssertEqual(repository.loadCallCount, 0)
     }
+    
+    func test_loadEmployees_makesCallToLoadEmployeesFromRepository() {
+        let repository = EmployeesRepositorySpy()
+        let sut = EmployeesPresenter(repository: repository)
+        
+        sut.loadEmployees()
+        XCTAssertEqual(repository.loadCallCount, 1)
+        
+        sut.loadEmployees()
+        XCTAssertEqual(repository.loadCallCount, 2)
+    }
 }
 
 private class EmployeesRepositorySpy: EmployeesRepository {

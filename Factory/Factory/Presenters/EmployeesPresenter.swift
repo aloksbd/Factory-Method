@@ -15,4 +15,8 @@ class EmployeesPresenter {
     init(repository: EmployeesRepository) {
         self.repository = repository
     }
+    
+    func loadEmployees() {
+        repository.load { _ in }
+    }
 }
