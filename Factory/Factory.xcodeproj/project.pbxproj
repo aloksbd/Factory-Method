@@ -14,6 +14,7 @@
 		5C82107F26BFA017006F62A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */; };
 		5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */; };
 		5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109426BFACBF006F62A6 /* EmployeesListView.swift */; };
+		5C82109726BFB1EB006F62A6 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109626BFB1EB006F62A6 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewTests.swift; sourceTree = "<group>"; };
 		5C82108E26BFA11A006F62A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C82109426BFACBF006F62A6 /* EmployeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListView.swift; sourceTree = "<group>"; };
+		5C82109626BFB1EB006F62A6 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
 				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
+				5C82109626BFB1EB006F62A6 /* Employee.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* ViewController.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
+				5C82109726BFB1EB006F62A6 /* Employee.swift in Sources */,
 				5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

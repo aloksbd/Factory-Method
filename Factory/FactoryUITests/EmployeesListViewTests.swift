@@ -14,6 +14,14 @@ class EmployeesListViewTests: XCTestCase {
         
         XCTAssertEqual(sut.numberOfRenderedEmployees(), 0)
     }
+    
+    func test_displayEmployees_rendersNewEmployees() {
+        let employees = ["employee1", "employee 2"]
+        let sut = EmployeesListView()
+        sut.displayEmployees(employees)
+        
+        XCTAssertEqual(sut.numberOfRenderedEmployees(), 2)
+    }
 }
 
 private extension EmployeesListView {
