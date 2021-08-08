@@ -29,6 +29,10 @@ final class EmployeesGridView: NSObject, EmployeesView {
     func displayEmployees(_ employees: [PresentableEmployee]) {
         self.employees = employees
     }
+    
+    func getView() -> UIView {
+        return collectionView
+    }
 }
 
 extension EmployeesGridView: UICollectionViewDataSource {

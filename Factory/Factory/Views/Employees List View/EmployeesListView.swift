@@ -24,6 +24,10 @@ final class EmployeesListView: NSObject, EmployeesView {
     func displayEmployees(_ employees: [PresentableEmployee]) {
         self.employees = employees
     }
+    
+    func getView() -> UIView {
+        return tableView
+    }
 }
 
 extension EmployeesListView: UITableViewDataSource {

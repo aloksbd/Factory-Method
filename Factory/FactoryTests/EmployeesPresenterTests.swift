@@ -52,6 +52,10 @@ class EmployeesPresenterTests: XCTestCase {
 }
 
 private class ViewSpy: EmployeesView {
+    func getView() -> UIView {
+        return UIView()
+    }
+    
     var messages = [Message]()
     
     enum Message: Equatable {
