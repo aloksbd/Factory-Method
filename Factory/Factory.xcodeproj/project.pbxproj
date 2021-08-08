@@ -68,6 +68,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C720CBC26BFEE8900C2F4A4 /* Employees List View */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
+				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
+			);
+			path = "Employees List View";
+			sourceTree = "<group>";
+		};
+		5C720CBD26BFEE9B00C2F4A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C720CBE26BFEEA700C2F4A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C82107626BFA013006F62A6 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C720CBF26BFEEC700C2F4A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
+			);
+			path = "Employees List View Tests";
+			sourceTree = "<group>";
+		};
 		5C82106626BFA013006F62A6 = {
 			isa = PBXGroup;
 			children = (
@@ -91,13 +133,12 @@
 			children = (
 				5C82107226BFA013006F62A6 /* AppDelegate.swift */,
 				5C82107426BFA013006F62A6 /* SceneDelegate.swift */,
-				5C82107626BFA013006F62A6 /* ViewController.swift */,
+				5C720CBE26BFEEA700C2F4A4 /* Controllers */,
+				5C720CBF26BFEEC700C2F4A4 /* Views */,
+				5C720CBD26BFEE9B00C2F4A4 /* Models */,
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
-				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
-				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
-				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -105,9 +146,8 @@
 		5C82108B26BFA11A006F62A6 /* FactoryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */,
 				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
-				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
 			);
 			path = FactoryUITests;
