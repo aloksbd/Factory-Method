@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				5C94254B26C0456900C9996C /* Core */,
-				5C94254A26C0453A00C9996C /* Main */,
+				5C94254A26C0453A00C9996C /* Main App */,
 				5C94254C26C0457900C9996C /* UI */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
 			);
@@ -267,7 +267,7 @@
 			path = "Employees View Factory";
 			sourceTree = "<group>";
 		};
-		5C94254A26C0453A00C9996C /* Main */ = {
+		5C94254A26C0453A00C9996C /* Main App */ = {
 			isa = PBXGroup;
 			children = (
 				5C82107226BFA013006F62A6 /* AppDelegate.swift */,
@@ -276,7 +276,7 @@
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */,
 			);
-			path = Main;
+			path = "Main App";
 			sourceTree = "<group>";
 		};
 		5C94254B26C0456900C9996C /* Core */ = {
