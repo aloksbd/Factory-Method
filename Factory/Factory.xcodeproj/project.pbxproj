@@ -7,14 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */; };
 		5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107226BFA013006F62A6 /* AppDelegate.swift */; };
 		5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107426BFA013006F62A6 /* SceneDelegate.swift */; };
 		5C82107726BFA013006F62A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82107626BFA013006F62A6 /* ViewController.swift */; };
 		5C82107C26BFA017006F62A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C82107B26BFA017006F62A6 /* Assets.xcassets */; };
 		5C82107F26BFA017006F62A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */; };
+		5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */; };
+		5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109426BFACBF006F62A6 /* EmployeesListView.swift */; };
+		5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */; };
+		5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */; };
+		5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */; };
+		5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5C82108F26BFA11A006F62A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C82106726BFA013006F62A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C82106E26BFA013006F62A6;
+			remoteInfo = Factory;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
 		5C82106F26BFA013006F62A6 /* Factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82107226BFA013006F62A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C82107426BFA013006F62A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,10 +40,25 @@
 		5C82107B26BFA017006F62A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C82107E26BFA017006F62A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C82108026BFA017006F62A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C82108A26BFA11A006F62A6 /* FactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewTests.swift; sourceTree = "<group>"; };
+		5C82108E26BFA11A006F62A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C82109426BFACBF006F62A6 /* EmployeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListView.swift; sourceTree = "<group>"; };
+		5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableEmployee.swift; sourceTree = "<group>"; };
+		5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewSnapshotTests.swift; sourceTree = "<group>"; };
+		5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5C82106C26BFA013006F62A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C82108726BFA11A006F62A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				5C82107126BFA013006F62A6 /* Factory */,
+				5C82108B26BFA11A006F62A6 /* FactoryUITests */,
 				5C82107026BFA013006F62A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				5C82106F26BFA013006F62A6 /* Factory.app */,
+				5C82108A26BFA11A006F62A6 /* FactoryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +95,31 @@
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
+				5C82109426BFACBF006F62A6 /* EmployeesListView.swift */,
+				5C720CBA26BFD96700C2F4A4 /* EmployeeListCell.swift */,
+				5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		5C82108B26BFA11A006F62A6 /* FactoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
+				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
+				5C82108E26BFA11A006F62A6 /* Info.plist */,
+			);
+			path = FactoryUITests;
+			sourceTree = "<group>";
+		};
+		5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */,
+				5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */,
+			);
+			path = "Snapshot Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +142,24 @@
 			productReference = 5C82106F26BFA013006F62A6 /* Factory.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C82108926BFA11A006F62A6 /* FactoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C82109126BFA11A006F62A6 /* Build configuration list for PBXNativeTarget "FactoryUITests" */;
+			buildPhases = (
+				5C82108626BFA11A006F62A6 /* Sources */,
+				5C82108726BFA11A006F62A6 /* Frameworks */,
+				5C82108826BFA11A006F62A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C82109026BFA11A006F62A6 /* PBXTargetDependency */,
+			);
+			name = FactoryUITests;
+			productName = FactoryUITests;
+			productReference = 5C82108A26BFA11A006F62A6 /* FactoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +171,10 @@
 				TargetAttributes = {
 					5C82106E26BFA013006F62A6 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					5C82108926BFA11A006F62A6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 5C82106E26BFA013006F62A6;
 					};
 				};
 			};
@@ -112,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				5C82106E26BFA013006F62A6 /* Factory */,
+				5C82108926BFA11A006F62A6 /* FactoryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C82108826BFA11A006F62A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -133,13 +221,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
+				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C82107726BFA013006F62A6 /* ViewController.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
+				5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */,
 				5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C82108626BFA11A006F62A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */,
+				5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */,
+				5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */,
+				5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C82109026BFA11A006F62A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C82106E26BFA013006F62A6 /* Factory */;
+			targetProxy = 5C82108F26BFA11A006F62A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */ = {
@@ -307,6 +417,46 @@
 			};
 			name = Release;
 		};
+		5C82109226BFA11A006F62A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95T69XHSY5;
+				INFOPLIST_FILE = FactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.FactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factory.app/Factory";
+			};
+			name = Debug;
+		};
+		5C82109326BFA11A006F62A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95T69XHSY5;
+				INFOPLIST_FILE = FactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alok.FactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Factory.app/Factory";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -324,6 +474,15 @@
 			buildConfigurations = (
 				5C82108426BFA017006F62A6 /* Debug */,
 				5C82108526BFA017006F62A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C82109126BFA11A006F62A6 /* Build configuration list for PBXNativeTarget "FactoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C82109226BFA11A006F62A6 /* Debug */,
+				5C82109326BFA11A006F62A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
