@@ -10,17 +10,13 @@ import XCTest
 
 class EmployeesPresenterTests: XCTestCase {
     func test_init_doesNotLoadEmployeesFromRepository() {
-        let repository = EmployeesRepositorySpy()
-        let view = ViewSpy()
-        _ = EmployeesPresenter(repository: repository, employeesView: view)
+        let(_, repository, _) = makeSut()
         
         XCTAssertEqual(repository.loadCallCount, 0)
     }
     
     func test_loadEmployees_makesCallToLoadEmployeesFromRepository() {
-        let repository = EmployeesRepositorySpy()
-        let view = ViewSpy()
-        let sut = EmployeesPresenter(repository: repository, employeesView: view)
+        let(sut, repository, _) = makeSut()
         
         sut.loadEmployees()
         XCTAssertEqual(repository.loadCallCount, 1)
@@ -30,17 +26,13 @@ class EmployeesPresenterTests: XCTestCase {
     }
     
     func test_init_doesNotSendMessagesToViews() {
-        let repository = EmployeesRepositorySpy()
-        let view = ViewSpy()
-        _ = EmployeesPresenter(repository: repository, employeesView: view)
+        let(_, _, view) = makeSut()
         
         XCTAssertEqual(view.messages, [])
     }
     
     func test_loadEmployees_displaysEmployees() {
-        let repository = EmployeesRepositorySpy()
-        let view = ViewSpy()
-        let sut = EmployeesPresenter(repository: repository, employeesView: view)
+        let(sut, repository, view) = makeSut()
         
         let employee = PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1")
         
@@ -48,6 +40,14 @@ class EmployeesPresenterTests: XCTestCase {
         repository.complete(with: [employee])
         
         XCTAssertEqual(view.messages, [.display(employees: [employee])])
+    }
+    
+    private func makeSut() -> (sut: EmployeesPresenter, repository: EmployeesRepositorySpy, view: ViewSpy) {
+        let repository = EmployeesRepositorySpy()
+        let view = ViewSpy()
+        let sut = EmployeesPresenter(repository: repository, employeesView: view)
+        
+        return (sut, repository, view)
     }
 }
 
