@@ -10,57 +10,40 @@ import XCTest
 
 class EmployeesViewControllerIntegrationTests: XCTestCase {
     func test_init_doesNotAskToLoadEmployees() {
-        let (_, presenter, _) = makeSut()
+        let (_, repository) = makeSut()
         
-        XCTAssertEqual(presenter.loadCallCount, 0)
+        XCTAssertEqual(repository.loadCallCount, 0)
     }
     
     func test_viewDidLoad_asksToLoadEmployees() {
-        let (sut, presenter, _) = makeSut()
+        let (sut, repository) = makeSut()
         sut.loadViewIfNeeded()
         
-        XCTAssertEqual(presenter.loadCallCount, 1)
+        XCTAssertEqual(repository.loadCallCount, 1)
     }
     
     func test_viewDidLoad_addsEmployeesView() {
-        let (sut, _, employeesView) = makeSut()
+        let (sut, _) = makeSut()
         sut.loadViewIfNeeded()
         
         let views = sut.view.subviews
-        XCTAssertEqual(views[0], employeesView.getView())
+        guard let _ = views[0] as? UICollectionView else {
+            return XCTFail("Should create EmployeesGridView")
+        }
     }
     
-    private func makeSut() -> (sut: EmployeesViewController, presenter: MockEmployeesPresenter, view: EmployeesViewSpy) {
-        let presenter = MockEmployeesPresenter()
-        let view = EmployeesViewSpy()
-        let sut = EmployeesViewController(presenter: presenter, employeesView: view)
+    private func makeSut() -> (sut: EmployeesViewController, repository: EmployeesRepositorySpy) {
+        let repository = EmployeesRepositorySpy()
+        let sut = EmployeesViewComposer.createEmployeesViewController(setting: .grid, repository: repository)
         
-        return (sut, presenter, view)
-    }
-}
-
-private class MockEmployeesPresenter: EmployeesPresenter {
-    var loadCallCount = 0
-    
-    init() {
-        super.init(repository: EmployeesRepositorySpy(), employeesView: EmployeesViewSpy())
-    }
-    
-    override func loadEmployees() {
-        loadCallCount += 1
+        return (sut, repository)
     }
 }
 
 private class EmployeesRepositorySpy: EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {}
-}
-
-private class EmployeesViewSpy: EmployeesView {
-    let view = UIView()
-    func getView() -> UIView {
-        view
+    var loadCallCount = 0
+    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
+        loadCallCount += 1
     }
-    
-    func displayEmployees(_ employees: [PresentableEmployee]) {}
 }
 

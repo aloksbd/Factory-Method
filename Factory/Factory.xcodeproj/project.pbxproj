@@ -30,6 +30,7 @@
 		5C94254426C0395C00C9996C /* EmployeesViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */; };
 		5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254626C03ADE00C9996C /* EmployeesViewFactory.swift */; };
 		5C94254926C03B0700C9996C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254826C03B0700C9996C /* Settings.swift */; };
+		5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewFactoryTests.swift; sourceTree = "<group>"; };
 		5C94254626C03ADE00C9996C /* EmployeesViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewFactory.swift; sourceTree = "<group>"; };
 		5C94254826C03B0700C9996C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				5C82107426BFA013006F62A6 /* SceneDelegate.swift */,
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
+				5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */,
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
+				5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */,
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
