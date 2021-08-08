@@ -11,6 +11,7 @@ final class EmployeesListView: NSObject {
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         return tableView
     }()
     

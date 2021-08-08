@@ -15,6 +15,9 @@
 		5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */; };
 		5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109426BFACBF006F62A6 /* EmployeesListView.swift */; };
 		5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */; };
+		5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */; };
+		5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */; };
+		5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		5C82108E26BFA11A006F62A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C82109426BFACBF006F62A6 /* EmployeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListView.swift; sourceTree = "<group>"; };
 		5C82109626BFB1EB006F62A6 /* PresentableEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableEmployee.swift; sourceTree = "<group>"; };
+		5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesListViewSnapshotTests.swift; sourceTree = "<group>"; };
+		5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,20 @@
 			isa = PBXGroup;
 			children = (
 				5C82108C26BFA11A006F62A6 /* EmployeesListViewTests.swift */,
+				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
+				5C82109826BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
 			);
 			path = FactoryUITests;
+			sourceTree = "<group>";
+		};
+		5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C82109B26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift */,
+				5C82109D26BFC12F006F62A6 /* UIViewController+Snapshot.swift */,
+			);
+			path = "Snapshot Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C82109C26BFC0DF006F62A6 /* XCTestCase+Snapshot.swift in Sources */,
+				5C82109926BFBB5B006F62A6 /* EmployeesListViewSnapshotTests.swift in Sources */,
+				5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */,
 				5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
