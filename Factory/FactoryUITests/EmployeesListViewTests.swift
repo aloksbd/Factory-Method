@@ -16,12 +16,19 @@ class EmployeesListViewTests: XCTestCase {
     }
     
     func test_displayEmployees_rendersNewEmployees() {
-        let employees = ["employee1", "employee 2"]
+        let employee1 = makeEmployee(name: "Employee 1", designation: "designation 1", salary: "1")
+        let employee2 = makeEmployee(name: "Employee 2", designation: "designation 2", salary: "2")
+        
         let sut = EmployeesListView()
-        sut.displayEmployees(employees)
+        sut.displayEmployees([employee1, employee2])
         
         XCTAssertEqual(sut.numberOfRenderedEmployees(), 2)
     }
+    
+    private func makeEmployee(name: String, designation: String, salary: String) -> PresentableEmployee {
+        return PresentableEmployee(name: name, designation: designation, salary: salary)
+    }
+
 }
 
 private extension EmployeesListView {

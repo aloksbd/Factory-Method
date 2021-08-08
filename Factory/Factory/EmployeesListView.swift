@@ -14,13 +14,13 @@ final class EmployeesListView: NSObject {
         return tableView
     }()
     
-    private var employees = [String]() {
+    private var employees = [PresentableEmployee]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    func displayEmployees(_ employees: [String]) {
+    func displayEmployees(_ employees: [PresentableEmployee]) {
         self.employees = employees
     }
 }
@@ -31,8 +31,16 @@ extension EmployeesListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = employees[indexPath.row]
+        let cell = EmployeeListCell()
+        cell.nameLabel.text = employees[indexPath.row].name
+        cell.designationLabel.text = employees[indexPath.row].designation
+        cell.salaryLabel.text = employees[indexPath.row].salary
         return cell
     }
+}
+
+final class EmployeeListCell: UITableViewCell {
+    private(set) lazy var nameLabel = UILabel()
+    private(set) lazy var designationLabel = UILabel()
+    private(set) lazy var salaryLabel = UILabel()
 }
