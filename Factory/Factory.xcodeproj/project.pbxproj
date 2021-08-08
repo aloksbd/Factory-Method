@@ -225,12 +225,10 @@
 		5C82108B26BFA11A006F62A6 /* FactoryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5C720CC226BFF01C00C2F4A4 /* Employees Grid View Tests */,
-				5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */,
+				5C94256126C0504D00C9996C /* Views */,
 				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
-				5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */,
-				5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */,
+				5C94256226C0505500C9996C /* Controllers */,
 			);
 			path = FactoryUITests;
 			sourceTree = "<group>";
@@ -307,6 +305,32 @@
 				5C94255726C04BAA00C9996C /* Info.plist */,
 			);
 			path = FactoryMainTests;
+			sourceTree = "<group>";
+		};
+		5C94256026C0504000C9996C /* Employees View Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */,
+			);
+			path = "Employees View Factory";
+			sourceTree = "<group>";
+		};
+		5C94256126C0504D00C9996C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C720CC226BFF01C00C2F4A4 /* Employees Grid View Tests */,
+				5C720CC126BFEF1000C2F4A4 /* Employees List View Tests */,
+				5C94256026C0504000C9996C /* Employees View Factory */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5C94256226C0505500C9996C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
