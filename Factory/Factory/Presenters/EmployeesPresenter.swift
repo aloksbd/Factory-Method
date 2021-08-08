@@ -19,6 +19,8 @@ class EmployeesPresenter {
     }
     
     func loadEmployees() {
-        repository.load { _ in }
+        repository.load { employees in
+            self.employeesView.displayEmployees(employees)
+        }
     }
 }

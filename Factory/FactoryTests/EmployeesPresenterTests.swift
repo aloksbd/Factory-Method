@@ -36,6 +36,19 @@ class EmployeesPresenterTests: XCTestCase {
         
         XCTAssertEqual(view.messages, [])
     }
+    
+    func test_loadEmployees_displaysEmployees() {
+        let repository = EmployeesRepositorySpy()
+        let view = ViewSpy()
+        let sut = EmployeesPresenter(repository: repository, employeesView: view)
+        
+        let employee = PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1")
+        
+        sut.loadEmployees()
+        repository.complete(with: [employee])
+        
+        XCTAssertEqual(view.messages, [.display(employees: [employee])])
+    }
 }
 
 private class ViewSpy: EmployeesView {
@@ -44,12 +57,23 @@ private class ViewSpy: EmployeesView {
     enum Message: Equatable {
         case display(employees: [PresentableEmployee])
     }
+    
+    func displayEmployees(_ employees: [PresentableEmployee]) {
+        messages.append(.display(employees: employees))
+    }
 }
 
 private class EmployeesRepositorySpy: EmployeesRepository {
-    var loadCallCount = 0
+    var loadCallCount: Int {
+        completions.count
+    }
+    private var completions = [([PresentableEmployee]) -> Void]()
     
     func load(completion: @escaping ([PresentableEmployee]) -> Void) {
-        loadCallCount += 1
+        completions.append(completion)
+    }
+    
+    func complete(with employees: [PresentableEmployee], at index: Int = 0) {
+        completions[index](employees)
     }
 }

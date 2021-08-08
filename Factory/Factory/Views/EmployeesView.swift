@@ -6,5 +6,5 @@
 //
 
 protocol EmployeesView {
-    
+    func displayEmployees(_ employees: [PresentableEmployee])
 }
