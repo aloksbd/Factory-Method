@@ -50,7 +50,7 @@ private extension EmployeesGridView {
             return nil
         }
         let ds = collectionView.dataSource
-        let index = IndexPath(row: row, section: EmployeeListSection)
+        let index = IndexPath(item: row, section: EmployeeListSection)
         return ds?.collectionView(collectionView, cellForItemAt: index)
     }
     

@@ -50,20 +50,19 @@ final class EmployeeGridCell: UICollectionViewCell {
             nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
             nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
             
-            designationLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
-            designationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            designationLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            designationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
             
-            salaryTitleLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            salaryTitleLabel.topAnchor.constraint(equalTo: designationLabel.bottomAnchor, constant: 8),
             salaryTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            salaryTitleLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -4),
             
-            salaryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            salaryLabel.topAnchor.constraint(equalTo: designationLabel.bottomAnchor, constant: 8),
             salaryLabel.leadingAnchor.constraint(equalTo: salaryTitleLabel.trailingAnchor),
             
             view.topAnchor.constraint(equalTo: topAnchor),
-            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
+            view.leadingAnchor.constraint(equalTo: leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     

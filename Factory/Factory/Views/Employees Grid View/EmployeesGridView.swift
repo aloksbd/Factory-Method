@@ -9,8 +9,14 @@ import UIKit
 
 final class EmployeesGridView: NSObject {
     private(set) lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: 160, height: 85)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 8, right: 20)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = self
+        collectionView.backgroundColor = .systemBackground
+        collectionView.register(EmployeeGridCell.self, forCellWithReuseIdentifier: "EmployeeGrid")
         return collectionView
     }()
     
@@ -31,7 +37,7 @@ extension EmployeesGridView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = EmployeeGridCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmployeeGrid", for: indexPath) as! EmployeeGridCell
         cell.nameLabel.text = employees[indexPath.row].name
         cell.designationLabel.text = employees[indexPath.row].designation
         cell.salaryLabel.text = employees[indexPath.row].salary
