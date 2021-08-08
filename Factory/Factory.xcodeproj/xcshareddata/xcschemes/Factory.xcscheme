@@ -61,6 +61,17 @@
                ReferencedContainer = "container:Factory.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5C94255226C04BAA00C9996C"
+               BuildableName = "FactoryMainTests.xctest"
+               BlueprintName = "FactoryMainTests"
+               ReferencedContainer = "container:Factory.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
