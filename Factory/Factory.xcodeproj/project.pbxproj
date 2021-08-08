@@ -27,6 +27,9 @@
 		5C94253826C0193600C9996C /* EmployeesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */; };
 		5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94253F26C02BC900C9996C /* EmployeesView.swift */; };
 		5C94254226C0324E00C9996C /* EmployeesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */; };
+		5C94254426C0395C00C9996C /* EmployeesViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */; };
+		5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254626C03ADE00C9996C /* EmployeesViewFactory.swift */; };
+		5C94254926C03B0700C9996C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254826C03B0700C9996C /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		5C94253926C0193600C9996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C94253F26C02BC900C9996C /* EmployeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesView.swift; sourceTree = "<group>"; };
 		5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerTests.swift; sourceTree = "<group>"; };
+		5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewFactoryTests.swift; sourceTree = "<group>"; };
+		5C94254626C03ADE00C9996C /* EmployeesViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewFactory.swift; sourceTree = "<group>"; };
+		5C94254826C03B0700C9996C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		5C720CBF26BFEEC700C2F4A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5C94254526C03ACC00C9996C /* Employees View Factory */,
 				5C720CC526BFF0A300C2F4A4 /* Employees Grid View */,
 				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
 				5C94253F26C02BC900C9996C /* EmployeesView.swift */,
@@ -194,6 +201,7 @@
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C82108026BFA017006F62A6 /* Info.plist */,
+				5C94254826C03B0700C9996C /* Settings.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				5C82109A26BFC0BC006F62A6 /* Snapshot Helpers */,
 				5C82108E26BFA11A006F62A6 /* Info.plist */,
 				5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */,
+				5C94254326C0395C00C9996C /* EmployeesViewFactoryTests.swift */,
 			);
 			path = FactoryUITests;
 			sourceTree = "<group>";
@@ -234,6 +243,14 @@
 				5C94253926C0193600C9996C /* Info.plist */,
 			);
 			path = FactoryTests;
+			sourceTree = "<group>";
+		};
+		5C94254526C03ACC00C9996C /* Employees View Factory */ = {
+			isa = PBXGroup;
+			children = (
+				5C94254626C03ADE00C9996C /* EmployeesViewFactory.swift */,
+			);
+			path = "Employees View Factory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,11 +382,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */,
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
+				5C94254926C03B0700C9996C /* Settings.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
 				5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */,
 				5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */,
@@ -388,6 +407,7 @@
 				5C720CC426BFF04600C2F4A4 /* EmployeesGridViewTests.swift in Sources */,
 				5C82109E26BFC12F006F62A6 /* UIViewController+Snapshot.swift in Sources */,
 				5C720CCB26BFF48D00C2F4A4 /* EmployeesGridViewSnapshotTests.swift in Sources */,
+				5C94254426C0395C00C9996C /* EmployeesViewFactoryTests.swift in Sources */,
 				5C82108D26BFA11A006F62A6 /* EmployeesListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
