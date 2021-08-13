@@ -7,12 +7,18 @@
 
 import UIKit
 
+extension UITableViewCell {
+    static var cellId: String {
+        return description()
+    }
+}
 
 final class EmployeesListView: NSObject, EmployeesLayoutView {
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.register(EmployeeListCell.self, forCellReuseIdentifier: EmployeeListCell.cellId)
         return tableView
     }()
     
@@ -37,7 +43,7 @@ extension EmployeesListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellControllers[indexPath.row].view()
+        return cellControllers[indexPath.row].view(in: tableView)
     }
 }
 
@@ -49,24 +55,28 @@ protocol ImageLoader {
 
 final class EmployeesListCellController: EmployeeImageView {
     private let loader: ImageLoader
-    private var cell: EmployeeListCell
+    private var cell: EmployeeListCell?
+    private var employee: PresentableEmployee
     
     public init(loader: ImageLoader, employee: PresentableEmployee) {
         self.loader = loader
-        self.cell = EmployeeListCell()
-        cell.nameLabel.text = employee.name
-        cell.designationLabel.text = employee.designation
-        cell.salaryLabel.text = employee.salary
         loader.loadImage()
+        self.employee = employee
     }
     
-    func view() -> UITableViewCell {
-        return cell
+    func view(in tableView: UITableView) -> UITableViewCell {
+        cell = tableView.dequeueReusableCell(withIdentifier: EmployeeListCell.cellId) as? EmployeeListCell
+        cell?.nameLabel.text = employee.name
+        cell?.designationLabel.text = employee.designation
+        cell?.salaryLabel.text = employee.salary
+        loader.loadImage()
+        return cell!
     }
     
     func display(_ model: EmployeeImageViewModel) {
         DispatchQueue.main.async { [weak self] in
-            self?.cell.employeeImageView.image = model.image
+            self?.cell?.employeeImageView.image = model.image
+            self?.cell?.setNeedsLayout()
         }
     }
 }
