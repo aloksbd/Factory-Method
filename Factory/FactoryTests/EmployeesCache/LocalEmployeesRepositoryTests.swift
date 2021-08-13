@@ -18,7 +18,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
     func test_save_requestsCacheDeletion() {
         let (sut, store) = makeSUT()
         
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
 
         sut.save(employees) { _ in }
         
@@ -29,7 +29,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
         let (sut, store) = makeSUT()
         let deletionError = anyNSError()
         
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         
         sut.save(employees) { _ in }
         store.completeDeletion(with: deletionError)
@@ -39,7 +39,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
     
     func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion() {
         let timestamp = Date()
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let (sut, store) = makeSUT(currentDate: { timestamp })
         
         sut.save(employees) { _ in }
@@ -81,7 +81,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
         var sut: LocalEmployeesRepository? = LocalEmployeesRepository(store: store, currentDate: Date.init)
         
         var receivedResults = [LocalEmployeesRepository.SaveResult]()
-        sut?.save(uniqueEmployees()) { receivedResults.append($0) }
+        sut?.save(uniqueEmployees().employees) { receivedResults.append($0) }
         
         sut = nil
         store.completeDeletion(with: anyNSError())
@@ -94,7 +94,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
         var sut: LocalEmployeesRepository? = LocalEmployeesRepository(store: store, currentDate: Date.init)
         
         var receivedResults = [LocalEmployeesRepository.SaveResult]()
-        sut?.save(uniqueEmployees()) { receivedResults.append($0) }
+        sut?.save(uniqueEmployees().employees) { receivedResults.append($0) }
         
         store.completeDeletionSuccessfully()
         sut = nil
@@ -117,7 +117,7 @@ class LocalEmployeesRepositoryTests: XCTestCase {
         let exp = expectation(description: "Wait for save completion")
         
         var receivedError: Error?
-        sut.save(uniqueEmployees()) { result in
+        sut.save(uniqueEmployees().employees) { result in
             if case let Result.failure(error) = result { receivedError = error }
             exp.fulfill()
         }
@@ -129,10 +129,14 @@ class LocalEmployeesRepositoryTests: XCTestCase {
     }
 }
 
-func uniqueEmployees() -> [Employee] {
+func uniqueEmployees() -> (employees: [Employee], presentableEmployeees: [PresentableEmployee]) {
     let employee1 = Employee(id: UUID(), name: "Employee 1", designation: "designation 2", salary: 1)
     let employee2 = Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2)
-    return [employee1,employee2]
+    
+    let presentableEmployee1 = PresentableEmployee(name: employee1.name, designation: employee1.designation, salary: "\(employee1.salary)")
+    let presentableEmployee2 = PresentableEmployee(name: employee2.name, designation: employee2.designation, salary: "\(employee2.salary)")
+    
+    return ([employee1,employee2], [presentableEmployee1, presentableEmployee2])
 }
 
 func anyNSError() -> NSError {

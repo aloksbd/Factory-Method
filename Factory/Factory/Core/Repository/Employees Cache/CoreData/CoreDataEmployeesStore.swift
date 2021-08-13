@@ -7,7 +7,7 @@
 
 import CoreData
 
-public final class CoreDataEmployeesStore: EmployeesStore {
+ final class CoreDataEmployeesStore: EmployeesStore {
     private static let modelName = "EmployeesStore"
     private static let model = NSManagedObjectModel.with(name: modelName, in: Bundle(for: CoreDataEmployeesStore.self))
     
@@ -19,7 +19,7 @@ public final class CoreDataEmployeesStore: EmployeesStore {
         case failedToLoadPersistentContainer(Error)
     }
 
-    public init(storeURL: URL) throws {
+     init(storeURL: URL) throws {
         guard let model = CoreDataEmployeesStore.model else {
             throw StoreError.modelNotFound
         }

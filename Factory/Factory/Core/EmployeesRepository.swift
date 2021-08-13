@@ -6,5 +6,7 @@
 //
 
 protocol EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void)
+    typealias Result = Swift.Result<[Employee], Error>
+    
+    func load(completion: @escaping (Result) -> Void)
 }

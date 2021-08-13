@@ -25,7 +25,7 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_retrieve_deliversFoundValuesOnNonEmptyCache() {
         let sut = makeSUT()
         
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let timestamp = Date()
         
         insert((employees, timestamp), to: sut)
@@ -36,7 +36,7 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
         let sut = makeSUT()
         
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let timestamp = Date()
         
         insert((employees, timestamp), to: sut)
@@ -47,7 +47,7 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_insert_deliversNoErrorOnEmptyCache() {
         let sut = makeSUT()
         
-        let insertionError = insert((uniqueEmployees(), Date()), to: sut)
+        let insertionError = insert((uniqueEmployees().employees, Date()), to: sut)
         
         XCTAssertNil(insertionError, "Expected to insert cache successfully")
     }
@@ -55,9 +55,9 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_insert_deliversNoErrorOnNonEmptyCache() {
         let sut = makeSUT()
         
-        insert((uniqueEmployees(), Date()), to: sut)
+        insert((uniqueEmployees().employees, Date()), to: sut)
         
-        let insertionError = insert((uniqueEmployees(), Date()), to: sut)
+        let insertionError = insert((uniqueEmployees().employees, Date()), to: sut)
         
         XCTAssertNil(insertionError, "Expected to override cache successfully")
     }
@@ -65,9 +65,9 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_insert_overridesPreviouslyInsertedCacheValues() {
         let sut = makeSUT()
         
-        insert((uniqueEmployees(), Date()), to: sut)
+        insert((uniqueEmployees().employees, Date()), to: sut)
         
-        let latestEmployees = uniqueEmployees()
+        let latestEmployees = uniqueEmployees().employees
         let latestTimestamp = Date()
         insert((latestEmployees, latestTimestamp), to: sut)
         
@@ -93,7 +93,7 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_delete_deliversNoErrorOnNonEmptyCache() {
         let sut = makeSUT()
         
-        insert((uniqueEmployees(), Date()), to: sut)
+        insert((uniqueEmployees().employees, Date()), to: sut)
         
         let deletionError = deleteCache(from: sut)
         
@@ -103,7 +103,7 @@ class CoreDataEmployeesStoreTests: XCTestCase {
     func test_delete_emptiesPreviouslyInsertedCache() {
         let sut = makeSUT()
         
-        insert((uniqueEmployees(), Date()), to: sut)
+        insert((uniqueEmployees().employees, Date()), to: sut)
         
         deleteCache(from: sut)
         

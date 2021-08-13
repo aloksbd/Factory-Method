@@ -24,12 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 final private class Repository: EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
-        completion([
-            PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1"),
-            PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2"),
-            PresentableEmployee(name: "Employee 3", designation: "designation 3", salary: "3")
-        ])
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
+        completion(
+            .success([
+                Employee(id: UUID(), name: "Employee 1", designation: "designation 1", salary: 1),
+                Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2),
+                Employee(id: UUID(), name: "Employee 3", designation: "designation 3", salary: 3)
+            ])
+        )
     }
 }
 

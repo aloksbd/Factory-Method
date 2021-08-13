@@ -42,7 +42,7 @@ class EmployeesViewControllerIntegrationTests: XCTestCase {
 
 private class EmployeesRepositorySpy: EmployeesRepository {
     var loadCallCount = 0
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
         loadCallCount += 1
     }
 }

@@ -21,9 +21,7 @@ class EmployeesViewControllerSnapshotTests: XCTestCase {
 }
 
 private class RepositorySpy: EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
-        completion([])
-    }
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) { }
 }
 
 private class EmployeesViewSpy: EmployeesView {

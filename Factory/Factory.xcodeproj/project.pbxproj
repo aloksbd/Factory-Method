@@ -46,6 +46,12 @@
 		5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0926C63F8200F7716B /* EmployeesStore.xcdatamodeld */; };
 		5CDC0A0D26C6421F00F7716B /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0C26C6421F00F7716B /* ManagedCache.swift */; };
 		5CDC0A0F26C6425900F7716B /* ManagedEmployees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */; };
+		5CDC0A1226C6494100F7716B /* RemoteEmployeesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */; };
+		5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */; };
+		5CDC0A1726C64AD200F7716B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1626C64AD200F7716B /* HTTPClient.swift */; };
+		5CDC0A1926C64BD800F7716B /* EmployeesItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */; };
+		5CDC0A1B26C651B000F7716B /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */; };
+		5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +126,12 @@
 		5CDC0A0A26C63F8200F7716B /* EmployeesStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeesStore.xcdatamodel; sourceTree = "<group>"; };
 		5CDC0A0C26C6421F00F7716B /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEmployees.swift; sourceTree = "<group>"; };
+		5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesRepositoryTests.swift; sourceTree = "<group>"; };
+		5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesRepository.swift; sourceTree = "<group>"; };
+		5CDC0A1626C64AD200F7716B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesItemsMapper.swift; sourceTree = "<group>"; };
+		5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +293,7 @@
 		5C94253626C0193600C9996C /* FactoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC0A1026C6491A00F7716B /* Employees Api */,
 				5C9ED4FF26C3F8B000AED8E4 /* Helpers */,
 				5C9ED4EE26C3A46700AED8E4 /* EmployeesCache */,
 				5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */,
@@ -380,6 +393,7 @@
 		5C9ED4F126C3A7D500AED8E4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC0A1326C64A6900F7716B /* Employees Api */,
 				5C9ED4F226C3A7DD00AED8E4 /* Employees Cache */,
 			);
 			path = Repository;
@@ -413,6 +427,34 @@
 				5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5CDC0A1026C6491A00F7716B /* Employees Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */,
+				5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */,
+			);
+			path = "Employees Api";
+			sourceTree = "<group>";
+		};
+		5CDC0A1326C64A6900F7716B /* Employees Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1C26C6529700F7716B /* URLSession */,
+				5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */,
+				5CDC0A1626C64AD200F7716B /* HTTPClient.swift */,
+				5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */,
+			);
+			path = "Employees Api";
+			sourceTree = "<group>";
+		};
+		5CDC0A1C26C6529700F7716B /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */,
+			);
+			path = URLSession;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,14 +617,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */,
+				5CDC0A1726C64AD200F7716B /* HTTPClient.swift in Sources */,
 				5C9ED50326C52F4800AED8E4 /* EmployeesCachePolicy.swift in Sources */,
 				5CDC0A0D26C6421F00F7716B /* ManagedCache.swift in Sources */,
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */,
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
+				5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
 				5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */,
+				5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
 				5C94254926C03B0700C9996C /* Settings.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
@@ -597,6 +642,7 @@
 				5C9ED4F626C3ABB000AED8E4 /* Employee.swift in Sources */,
 				5C720CC926BFF1BF00C2F4A4 /* EmployeeGridCell.swift in Sources */,
 				5C9ED4F826C3F65E00AED8E4 /* EmployeesStore.swift in Sources */,
+				5CDC0A1926C64BD800F7716B /* EmployeesItemsMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +665,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDC0A1B26C651B000F7716B /* URLSessionHTTPClientTests.swift in Sources */,
 				5C94253826C0193600C9996C /* EmployeesPresenterTests.swift in Sources */,
+				5CDC0A1226C6494100F7716B /* RemoteEmployeesRepositoryTests.swift in Sources */,
 				5C9ED50126C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				5CDC0A0526C6384900F7716B /* CoreDataEmployeesStoreTests.swift in Sources */,
 				5C9ED4FE26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift in Sources */,

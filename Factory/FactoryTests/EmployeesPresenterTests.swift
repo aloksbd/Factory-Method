@@ -34,12 +34,12 @@ class EmployeesPresenterTests: XCTestCase {
     func test_loadEmployees_displaysEmployees() {
         let(sut, repository, view) = makeSut()
         
-        let employee = PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1")
+        let (employees, presentableEmployees) = uniqueEmployees()
         
         sut.loadEmployees()
-        repository.complete(with: [employee])
+        repository.complete(with: employees)
         
-        XCTAssertEqual(view.messages, [.display(employees: [employee])])
+        XCTAssertEqual(view.messages, [.display(employees: presentableEmployees)])
     }
     
     private func makeSut() -> (sut: EmployeesPresenter, repository: EmployeesRepositorySpy, view: ViewSpy) {
@@ -71,13 +71,13 @@ private class EmployeesRepositorySpy: EmployeesRepository {
     var loadCallCount: Int {
         completions.count
     }
-    private var completions = [([PresentableEmployee]) -> Void]()
+    private var completions = [(EmployeesRepository.Result) -> Void]()
     
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
         completions.append(completion)
     }
     
-    func complete(with employees: [PresentableEmployee], at index: Int = 0) {
-        completions[index](employees)
+    func complete(with employees: [Employee], at index: Int = 0) {
+        completions[index](.success(employees))
     }
 }

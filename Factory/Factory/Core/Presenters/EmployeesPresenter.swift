@@ -15,8 +15,17 @@ class EmployeesPresenter {
     }
     
     func loadEmployees() {
-        repository.load { employees in
-            self.employeesView.displayEmployees(employees)
+        repository.load {[weak self] result in
+            guard let self = self else { return }
+            if let employees = try? result.get() {
+                self.employeesView.displayEmployees(employees.toPresentableModels())
+            }
         }
+    }
+}
+
+private extension Array where Element == Employee {
+    func toPresentableModels() -> [PresentableEmployee] {
+        return map { PresentableEmployee(name: $0.name, designation: $0.designation, salary: "\($0.salary)")}
     }
 }

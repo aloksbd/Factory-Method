@@ -42,7 +42,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_deliversCachedEmployeesOnNonExpiredCache() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let nonExpiredTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge().adding(seconds: 1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
@@ -53,7 +53,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_deliversNoEmployeesOnCacheExpiration() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let expirationTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge()
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
@@ -64,7 +64,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_deliversNoEmployeesOnExpiredCache() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let expiredTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge().adding(seconds: -1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
@@ -93,7 +93,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_hasNoSideEffectsOnNonExpiredCache() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let nonExpiredTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge().adding(seconds: 1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
@@ -105,7 +105,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_hasNoSideEffectsOnCacheExpiration() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let expirationTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge()
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
@@ -117,7 +117,7 @@ class LoadEmployeesFromCacheUseCaseTests: XCTestCase {
     }
     
     func test_load_hasNoSideEffectsOnExpiredCache() {
-        let employees = uniqueEmployees()
+        let (employees, _) = uniqueEmployees()
         let fixedCurrentDate = Date()
         let expiredTimestamp = fixedCurrentDate.minusEmployeesCacheMaxAge().adding(seconds: -1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })

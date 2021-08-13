@@ -16,9 +16,9 @@ final class LocalEmployeesRepository {
         self.currentDate = currentDate
     }
     
-    public typealias LoadResult = Result<[Employee], Error>
+     typealias LoadResult = Result<[Employee], Error>
 
-    public func load(completion: @escaping (LoadResult) -> Void) {
+     func load(completion: @escaping (LoadResult) -> Void) {
         store.retrieveCache { [weak self] result in
             guard let self = self else { return }
             
