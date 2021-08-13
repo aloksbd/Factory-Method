@@ -27,9 +27,9 @@ final private class Repository: EmployeesRepository {
     func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
         completion(
             .success([
-                Employee(id: UUID(), name: "Employee 1", designation: "designation 1", salary: 1),
-                Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2),
-                Employee(id: UUID(), name: "Employee 3", designation: "designation 3", salary: 3)
+                Employee(id: UUID(), name: "Employee 1", designation: "designation 1", salary: 1, url: URL(string: "https://url.com")!),
+                Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2, url: URL(string: "https://url.com")!),
+                Employee(id: UUID(), name: "Employee 3", designation: "designation 3", salary: 3, url: URL(string: "https://url.com")!)
             ])
         )
     }

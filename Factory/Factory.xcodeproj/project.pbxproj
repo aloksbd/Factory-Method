@@ -32,7 +32,7 @@
 		5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */; };
 		5C94255D26C04C1F00C9996C /* EmployeesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */; };
 		5C94255F26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */; };
-		5C9ED4F026C3A4AA00AED8E4 /* LocalEmployeesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4EF26C3A4AA00AED8E4 /* LocalEmployeesRepositoryTests.swift */; };
+		5C9ED4F026C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */; };
 		5C9ED4F426C3A81000AED8E4 /* LocalEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */; };
 		5C9ED4F626C3ABB000AED8E4 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F526C3ABB000AED8E4 /* Employee.swift */; };
 		5C9ED4F826C3F65E00AED8E4 /* EmployeesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */; };
@@ -52,8 +52,12 @@
 		5CDC0A1926C64BD800F7716B /* EmployeesItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */; };
 		5CDC0A1B26C651B000F7716B /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */; };
 		5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */; };
-		5CDC0A2026C6770100F7716B /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1F26C6770100F7716B /* RemoteFeedImageDataLoaderTests.swift */; };
-		5CDC0A2226C6777E00F7716B /* RemoteEmployeeImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2126C6777E00F7716B /* RemoteEmployeeImageDataLoader.swift */; };
+		5CDC0A2026C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */; };
+		5CDC0A2226C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */; };
+		5CDC0A2426C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */; };
+		5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */; };
+		5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */; };
+		5CDC0A2A26C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +118,7 @@
 		5C94255326C04BAA00C9996C /* FactoryMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C94255726C04BAA00C9996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
-		5C9ED4EF26C3A4AA00AED8E4 /* LocalEmployeesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesRepositoryTests.swift; sourceTree = "<group>"; };
+		5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEmployeesFromUseCaseTests.swift; sourceTree = "<group>"; };
 		5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesRepository.swift; sourceTree = "<group>"; };
 		5C9ED4F526C3ABB000AED8E4 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesStore.swift; sourceTree = "<group>"; };
@@ -134,8 +138,12 @@
 		5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesItemsMapper.swift; sourceTree = "<group>"; };
 		5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
-		5CDC0A1F26C6770100F7716B /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
-		5CDC0A2126C6777E00F7716B /* RemoteEmployeeImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeeImageDataLoader.swift; sourceTree = "<group>"; };
+		5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmplyeesImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesImageDataLoader.swift; sourceTree = "<group>"; };
+		5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEmployeesImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
+		5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesImageDataLoader.swift; sourceTree = "<group>"; };
+		5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEmployeesImageDataUseCaseTests.swift; sourceTree = "<group>"; };
+		5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEmployeeImageDataStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,9 +395,12 @@
 		5C9ED4EE26C3A46700AED8E4 /* EmployeesCache */ = {
 			isa = PBXGroup;
 			children = (
-				5C9ED4EF26C3A4AA00AED8E4 /* LocalEmployeesRepositoryTests.swift */,
+				5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */,
 				5C9ED4FD26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift */,
 				5CDC0A0426C6384900F7716B /* CoreDataEmployeesStoreTests.swift */,
+				5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */,
+				5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */,
+				5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */,
 			);
 			path = EmployeesCache;
 			sourceTree = "<group>";
@@ -410,6 +421,7 @@
 				5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */,
 				5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */,
 				5C9ED50226C52F4800AED8E4 /* EmployeesCachePolicy.swift */,
+				5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */,
 			);
 			path = "Employees Cache";
 			sourceTree = "<group>";
@@ -438,7 +450,7 @@
 			children = (
 				5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */,
 				5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */,
-				5CDC0A1F26C6770100F7716B /* RemoteFeedImageDataLoaderTests.swift */,
+				5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */,
 			);
 			path = "Employees Api";
 			sourceTree = "<group>";
@@ -448,6 +460,7 @@
 			children = (
 				5CDC0A1C26C6529700F7716B /* URLSession */,
 				5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */,
+				5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */,
 				5CDC0A1626C64AD200F7716B /* HTTPClient.swift */,
 				5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */,
 			);
@@ -458,7 +471,6 @@
 			isa = PBXGroup;
 			children = (
 				5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */,
-				5CDC0A2126C6777E00F7716B /* RemoteEmployeeImageDataLoader.swift */,
 			);
 			path = URLSession;
 			sourceTree = "<group>";
@@ -631,8 +643,9 @@
 				5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */,
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
 				5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */,
-				5CDC0A2226C6777E00F7716B /* RemoteEmployeeImageDataLoader.swift in Sources */,
+				5CDC0A2226C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
+				5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */,
 				5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */,
 				5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
@@ -677,9 +690,12 @@
 				5CDC0A1226C6494100F7716B /* RemoteEmployeesRepositoryTests.swift in Sources */,
 				5C9ED50126C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				5CDC0A0526C6384900F7716B /* CoreDataEmployeesStoreTests.swift in Sources */,
+				5CDC0A2426C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift in Sources */,
+				5CDC0A2A26C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift in Sources */,
 				5C9ED4FE26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift in Sources */,
-				5CDC0A2026C6770100F7716B /* RemoteFeedImageDataLoaderTests.swift in Sources */,
-				5C9ED4F026C3A4AA00AED8E4 /* LocalEmployeesRepositoryTests.swift in Sources */,
+				5CDC0A2026C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift in Sources */,
+				5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */,
+				5C9ED4F026C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

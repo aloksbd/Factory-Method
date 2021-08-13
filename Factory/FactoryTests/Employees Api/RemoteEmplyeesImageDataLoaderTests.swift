@@ -1,5 +1,5 @@
 //
-//  RemoteEmployeeImageDataLoaderTests.swift
+//  RemoteEmplyeesImageDataLoaderTests.swift
 //  FactoryTests
 //
 //  Created by alok subedi on 13/08/2021.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Factory
 
-class RemoteEmployeeImageDataLoaderTests: XCTestCase {
+class RemoteEmplyeesImageDataLoaderTests: XCTestCase {
 
     func test_init_doesNotPerformAnyURLRequest() {
         let (_, client) = makeSUT()
@@ -76,7 +76,7 @@ class RemoteEmployeeImageDataLoaderTests: XCTestCase {
     
     func test_loadImageDataFromURL_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
         let client = HTTPClientSpy()
-        var sut: RemoteEmployeeImageDataLoader? = RemoteEmployeeImageDataLoader(client: client)
+        var sut: RemoteEmployeesImageDataLoader? = RemoteEmployeesImageDataLoader(client: client)
         
         var capturedResults = [EmployeeImageDataLoader.Result]()
         sut?.loadImageData(from: anyURL()) { capturedResults.append($0) }
@@ -87,19 +87,19 @@ class RemoteEmployeeImageDataLoaderTests: XCTestCase {
         XCTAssertTrue(capturedResults.isEmpty)
     }
 
-    private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteEmployeeImageDataLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteEmployeesImageDataLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = RemoteEmployeeImageDataLoader(client: client)
+        let sut = RemoteEmployeesImageDataLoader(client: client)
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
     }
     
-    private func failure(_ error: RemoteEmployeeImageDataLoader.Error) -> EmployeeImageDataLoader.Result {
+    private func failure(_ error: RemoteEmployeesImageDataLoader.Error) -> EmployeeImageDataLoader.Result {
         return .failure(error)
     }
     
-    private func expect(_ sut: RemoteEmployeeImageDataLoader, toCompleteWith expectedResult: EmployeeImageDataLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ sut: RemoteEmployeesImageDataLoader, toCompleteWith expectedResult: EmployeeImageDataLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         let url = URL(string: "https://a-given-url.com")!
         let exp = expectation(description: "Wait for load completion")
 
@@ -108,7 +108,7 @@ class RemoteEmployeeImageDataLoaderTests: XCTestCase {
             case let (.success(receivedData), .success(expectedData)):
                 XCTAssertEqual(receivedData, expectedData, file: file, line: line)
                 
-            case let (.failure(receivedError as RemoteEmployeeImageDataLoader.Error), .failure(expectedError as RemoteEmployeeImageDataLoader.Error)):
+            case let (.failure(receivedError as RemoteEmployeesImageDataLoader.Error), .failure(expectedError as RemoteEmployeesImageDataLoader.Error)):
                 XCTAssertEqual(receivedError, expectedError, file: file, line: line)
 
             case let (.failure(receivedError as NSError), .failure(expectedError as NSError)):

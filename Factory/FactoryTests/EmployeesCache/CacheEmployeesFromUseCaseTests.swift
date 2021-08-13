@@ -1,5 +1,5 @@
 //
-//  LocalEmployeesRepositoryTests.swift
+//  CacheEmployeesFromUseCaseTests.swift
 //  FactoryTests
 //
 //  Created by alok subedi on 11/08/2021.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Factory
 
-class LocalEmployeesRepositoryTests: XCTestCase {
+class CacheEmployeesFromUseCaseTests: XCTestCase {
     func test_init_doesNotCallStore() {
         let (_, store) = makeSUT()
         
@@ -130,8 +130,8 @@ class LocalEmployeesRepositoryTests: XCTestCase {
 }
 
 func uniqueEmployees() -> (employees: [Employee], presentableEmployeees: [PresentableEmployee]) {
-    let employee1 = Employee(id: UUID(), name: "Employee 1", designation: "designation 2", salary: 1)
-    let employee2 = Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2)
+    let employee1 = Employee(id: UUID(), name: "Employee 1", designation: "designation 2", salary: 1, url: anyURL())
+    let employee2 = Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2, url: anyURL())
     
     let presentableEmployee1 = PresentableEmployee(name: employee1.name, designation: employee1.designation, salary: "\(employee1.salary)")
     let presentableEmployee2 = PresentableEmployee(name: employee2.name, designation: employee2.designation, salary: "\(employee2.salary)")

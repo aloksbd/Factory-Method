@@ -1,5 +1,5 @@
 //
-//  RemoteEmployeeImageDataLoader.swift
+//  RemoteEmployeesImageDataLoader.swift
 //  Factory
 //
 //  Created by alok subedi on 13/08/2021.
@@ -13,7 +13,7 @@ public protocol EmployeeImageDataLoader {
     func loadImageData(from url: URL, completion: @escaping (Result) -> Void)
 }
 
-final class RemoteEmployeeImageDataLoader: EmployeeImageDataLoader {
+final class RemoteEmployeesImageDataLoader: EmployeeImageDataLoader {
     private let client: HTTPClient
     
     init(client: HTTPClient) {

@@ -5,14 +5,16 @@
         <relationship name="employees" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ManagedEmployees" inverseName="cache" inverseEntity="ManagedEmployees"/>
     </entity>
     <entity name="ManagedEmployees" representedClassName="ManagedEmployees" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary"/>
         <attribute name="designation" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="salary" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="URI"/>
         <relationship name="cache" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedCache" inverseName="employees" inverseEntity="ManagedCache"/>
     </entity>
     <elements>
         <element name="ManagedCache" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="ManagedEmployees" positionX="229.6547241210938" positionY="-68.59353637695312" width="128" height="103"/>
+        <element name="ManagedEmployees" positionX="229.6547241210938" positionY="-68.59353637695312" width="128" height="133"/>
     </elements>
 </model>

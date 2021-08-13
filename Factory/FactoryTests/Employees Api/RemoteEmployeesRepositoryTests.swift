@@ -118,14 +118,15 @@ class RemoteEmployeesRepositoryTests: XCTestCase {
         return .failure(error)
     }
         
-    private func makeItem(id: UUID, name: String, designation: String, salary: Int) -> (model: Employee, json: [String: Any]) {
-        let item = Employee(id: id, name: name, designation: designation, salary: salary)
+    private func makeItem(id: UUID, name: String, designation: String, salary: Int, url: URL = anyURL() ) -> (model: Employee, json: [String: Any]) {
+        let item = Employee(id: id, name: name, designation: designation, salary: salary, url: url)
         
         let json = [
             "id": id.uuidString,
             "name": name,
             "designation": designation,
-            "salary": salary
+            "salary": salary,
+            "url": url.absoluteString
         ].compactMapValues { $0 }
         
         return (item, json)

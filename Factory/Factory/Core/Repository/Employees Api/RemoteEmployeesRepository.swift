@@ -39,7 +39,7 @@ final class RemoteEmployeesRepository: EmployeesRepository {
     
     private static func map(_ data: Data, from response: HTTPURLResponse) -> Result {
         do {
-            let items = try FeedItemsMapper.map(data, from: response)
+            let items = try EmployeesMapper.map(data, from: response)
             return .success(items.toModels())
         } catch {
             return .failure(error)
@@ -49,6 +49,6 @@ final class RemoteEmployeesRepository: EmployeesRepository {
 
 private extension Array where Element == RemoteEmployees {
     func toModels() -> [Employee] {
-        return map { Employee(id: $0.id, name: $0.name, designation: $0.designation, salary: $0.salary)}
+        return map { Employee(id: $0.id, name: $0.name, designation: $0.designation, salary: $0.salary, url: $0.url)}
     }
 }

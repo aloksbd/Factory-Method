@@ -12,4 +12,5 @@ struct Employee: Equatable {
     let name: String
     let designation: String
     let salary: Int
+    let url: URL
 }

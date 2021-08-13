@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FeedItemsMapper {
+final class EmployeesMapper {
     private struct Root: Decodable {
         let employees: [RemoteEmployees]
     }
@@ -26,4 +26,5 @@ struct RemoteEmployees: Decodable {
     let name: String
     let designation: String
     let salary: Int
+    let url: URL
 }
