@@ -6,7 +6,7 @@
 //
 
 class EmployeesViewFactory {
-    func createEmployeesView(for setting: Settings) -> EmployeesView {
+    func createEmployeesView(for setting: Settings) -> EmployeesLayoutView {
         switch setting {
         case .list:
             return EmployeesListView()

@@ -8,6 +8,7 @@
 import UIKit
 
 final class EmployeeListCell: UITableViewCell {
+    private(set) lazy var employeeImageView = UIImageView()
     private(set) lazy var nameLabel = UILabel.dynamicLabel(forTextStyle: .headline)
     private(set) lazy var designationLabel: UILabel = {
         let label = UILabel.dynamicLabel()
@@ -47,7 +48,8 @@ final class EmployeeListCell: UITableViewCell {
     }
     
     private func addViews() {
-        [stackView, salaryTitleLabel, salaryLabel].forEach {
+        employeeImageView.backgroundColor = .systemGray4
+        [employeeImageView, stackView, salaryTitleLabel, salaryLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -56,13 +58,19 @@ final class EmployeeListCell: UITableViewCell {
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
+            employeeImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
+            employeeImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            employeeImageView.heightAnchor.constraint(equalToConstant: 75),
+            employeeImageView.widthAnchor.constraint(equalTo: employeeImageView.heightAnchor),
+            
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            stackView.leadingAnchor.constraint(equalTo: employeeImageView.trailingAnchor, constant: 4),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
             
             salaryTitleLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
-            salaryTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            salaryTitleLabel.leadingAnchor.constraint(equalTo: employeeImageView.trailingAnchor, constant: 8),
             salaryTitleLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -4),
+            salaryTitleLabel.bottomAnchor.constraint(greaterThanOrEqualTo: employeeImageView.bottomAnchor),
             
             salaryLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
             salaryLabel.leadingAnchor.constraint(equalTo: salaryTitleLabel.trailingAnchor),

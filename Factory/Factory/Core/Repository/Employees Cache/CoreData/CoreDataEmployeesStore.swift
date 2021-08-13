@@ -79,7 +79,7 @@ import CoreData
 }
 
 extension CoreDataEmployeesStore: EmployeesImageDataStore {
-    public func insert(_ data: Data, for url: URL, completion: @escaping (EmployeesImageDataStore.InsertionResult) -> Void) {
+    func insert(_ data: Data, for url: URL, completion: @escaping (EmployeesImageDataStore.InsertionResult) -> Void) {
         perform { context in
             completion(Result {
                 try ManagedEmployees.first(with: url, in: context)
@@ -89,7 +89,7 @@ extension CoreDataEmployeesStore: EmployeesImageDataStore {
         }
     }
     
-    public func retrieve(dataForURL url: URL, completion: @escaping (EmployeesImageDataStore.RetrievalResult) -> Void) {
+    func retrieve(dataForURL url: URL, completion: @escaping (EmployeesImageDataStore.RetrievalResult) -> Void) {
         perform { context in
             completion(Result {
                 try ManagedEmployees.first(with: url, in: context)?.data

@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class EmployeesListView: NSObject, EmployeesView {
+
+final class EmployeesListView: NSObject, EmployeesLayoutView {
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
@@ -15,14 +16,14 @@ final class EmployeesListView: NSObject, EmployeesView {
         return tableView
     }()
     
-    private var employees = [PresentableEmployee]() {
+    private var cellControllers = [EmployeesListCellController]() {
         didSet {
             tableView.reloadData()
         }
     }
     
-    func displayEmployees(_ employees: [PresentableEmployee]) {
-        self.employees = employees
+    func display(_ cellControllers: [EmployeesListCellController]) {
+        self.cellControllers = cellControllers
     }
     
     func getView() -> UIView {
@@ -32,14 +33,41 @@ final class EmployeesListView: NSObject, EmployeesView {
 
 extension EmployeesListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        employees.count
+        cellControllers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = EmployeeListCell()
-        cell.nameLabel.text = employees[indexPath.row].name
-        cell.designationLabel.text = employees[indexPath.row].designation
-        cell.salaryLabel.text = employees[indexPath.row].salary
-        return cell
+        return cellControllers[indexPath.row].view()
     }
 }
+
+
+
+protocol ImageLoader {
+    func loadImage()
+}
+
+final class EmployeesListCellController: EmployeeImageView {
+    private let loader: ImageLoader
+    private var cell: EmployeeListCell
+    
+    public init(loader: ImageLoader, employee: PresentableEmployee) {
+        self.loader = loader
+        self.cell = EmployeeListCell()
+        cell.nameLabel.text = employee.name
+        cell.designationLabel.text = employee.designation
+        cell.salaryLabel.text = employee.salary
+        loader.loadImage()
+    }
+    
+    func view() -> UITableViewCell {
+        return cell
+    }
+    
+    func display(_ model: EmployeeImageViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            self?.cell.employeeImageView.image = model.image
+        }
+    }
+}
+

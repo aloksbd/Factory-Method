@@ -10,13 +10,13 @@ import Foundation
 final class URLSessionHTTPClient: HTTPClient {
     private let session: URLSession
     
-    public init(session: URLSession) {
+    init(session: URLSession) {
         self.session = session
     }
     
     private struct UnexpectedValuesRepresentation: Error {}
     
-    public func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
+    func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
         let task = session.dataTask(with: url) { data, response, error in
             completion(Result {
                 if let error = error {

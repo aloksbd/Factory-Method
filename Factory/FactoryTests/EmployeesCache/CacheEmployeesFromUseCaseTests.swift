@@ -133,8 +133,8 @@ func uniqueEmployees() -> (employees: [Employee], presentableEmployeees: [Presen
     let employee1 = Employee(id: UUID(), name: "Employee 1", designation: "designation 2", salary: 1, url: anyURL())
     let employee2 = Employee(id: UUID(), name: "Employee 2", designation: "designation 2", salary: 2, url: anyURL())
     
-    let presentableEmployee1 = PresentableEmployee(name: employee1.name, designation: employee1.designation, salary: "\(employee1.salary)")
-    let presentableEmployee2 = PresentableEmployee(name: employee2.name, designation: employee2.designation, salary: "\(employee2.salary)")
+    let presentableEmployee1 = PresentableEmployee(name: employee1.name, designation: employee1.designation, salary: "\(employee1.salary)", url: anyURL())
+    let presentableEmployee2 = PresentableEmployee(name: employee2.name, designation: employee2.designation, salary: "\(employee2.salary)", url: anyURL())
     
     return ([employee1,employee2], [presentableEmployee1, presentableEmployee2])
 }

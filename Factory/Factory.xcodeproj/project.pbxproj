@@ -58,6 +58,10 @@
 		5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */; };
 		5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */; };
 		5CDC0A2A26C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */; };
+		5CDC0A2C26C68C5800F7716B /* EmployeeImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */; };
+		5CDC0A2E26C68CA000F7716B /* EmployeeImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */; };
+		5CDC0A3126C6BFA200F7716B /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */; };
+		5CDC0A3326C6C1DC00F7716B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +148,10 @@
 		5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesImageDataLoader.swift; sourceTree = "<group>"; };
 		5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEmployeesImageDataUseCaseTests.swift; sourceTree = "<group>"; };
 		5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEmployeeImageDataStoreTests.swift; sourceTree = "<group>"; };
+		5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeImagePresenterTests.swift; sourceTree = "<group>"; };
+		5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeImagePresenter.swift; sourceTree = "<group>"; };
+		5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,7 @@
 		5C720CBF26BFEEC700C2F4A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC0A2F26C6BF7F00F7716B /* Employees Detail View */,
 				5C94254526C03ACC00C9996C /* Employees View Factory */,
 				5C720CC526BFF0A300C2F4A4 /* Employees Grid View */,
 				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
@@ -298,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				5C94252F26C0190900C9996C /* EmployeesPresenter.swift */,
+				5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -310,6 +320,7 @@
 				5C9ED4EE26C3A46700AED8E4 /* EmployeesCache */,
 				5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */,
 				5C94253926C0193600C9996C /* Info.plist */,
+				5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */,
 			);
 			path = FactoryTests;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */,
+				5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -473,6 +485,14 @@
 				5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */,
 			);
 			path = URLSession;
+			sourceTree = "<group>";
+		};
+		5CDC0A2F26C6BF7F00F7716B /* Employees Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */,
+			);
+			path = "Employees Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -644,10 +664,13 @@
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
 				5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */,
 				5CDC0A2226C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift in Sources */,
+				5CDC0A2E26C68CA000F7716B /* EmployeeImagePresenter.swift in Sources */,
+				5CDC0A3126C6BFA200F7716B /* EmployeeDetailView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
 				5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */,
 				5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */,
 				5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */,
+				5CDC0A3326C6C1DC00F7716B /* Coordinator.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
 				5C94254926C03B0700C9996C /* Settings.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
@@ -695,6 +718,7 @@
 				5C9ED4FE26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift in Sources */,
 				5CDC0A2026C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift in Sources */,
 				5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */,
+				5CDC0A2C26C68C5800F7716B /* EmployeeImagePresenterTests.swift in Sources */,
 				5C9ED4F026C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,11 +20,16 @@ class EmployeesListViewTests: XCTestCase {
         let employee2 = makeEmployee(name: "Employee 2", designation: "designation 2", salary: "2")
         let employee3 = makeEmployee(name: "Employee 3", designation: "designation 3", salary: "3")
         let employees = [employee1, employee2, employee3]
+        let employeesCellControllers = [
+            EmployeesListCellController(loader: ImageLoaderSpy(), employee: employee1),
+            EmployeesListCellController(loader: ImageLoaderSpy(), employee: employee2),
+            EmployeesListCellController(loader: ImageLoaderSpy(), employee: employee3)
+        ]
         
         let sut = EmployeesListView()
         XCTAssertEqual(sut.numberOfRenderedEmployees(), 0)
         
-        sut.displayEmployees(employees)
+        sut.display(employeesCellControllers)
         
         XCTAssertEqual(sut.numberOfRenderedEmployees(), employees.count)
         
@@ -39,7 +44,7 @@ class EmployeesListViewTests: XCTestCase {
     }
     
     private func makeEmployee(name: String, designation: String, salary: String) -> PresentableEmployee {
-        return PresentableEmployee(name: name, designation: designation, salary: salary)
+        return PresentableEmployee(name: name, designation: designation, salary: salary, url: anyURL())
     }
 
 }

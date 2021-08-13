@@ -14,7 +14,7 @@ class EmployeesListViewSnapshotTests: XCTestCase {
         let containerViewController = UIViewController()
         containerViewController.view = sut.tableView
         
-        sut.displayEmployees(emptyEmployees())
+        sut.display(emptyEmployees())
 
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .light)), named: "EMPTY_light")
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .dark)), named: "EMPTY_dark")
@@ -25,24 +25,34 @@ class EmployeesListViewSnapshotTests: XCTestCase {
         let containerViewController = UIViewController()
         containerViewController.view = sut.tableView
         
-        sut.displayEmployees(employees())
+        sut.display(employeesCellControllers())
 
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .light)), named: "EMPLOYEES_LIST_light")
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .dark)), named: "EMPLOYEES_LIST_dark")
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .light, size: .extraExtraExtraLarge)), named: "EMPLOYEES_LIST_dynamic")
     }
     
-    private func emptyEmployees() -> [PresentableEmployee] {
+    private func emptyEmployees() -> [EmployeesListCellController] {
         return []
     }
-    
-    private func employees() -> [PresentableEmployee] {
-        return [
-            PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1"),
-            PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2"),
-            PresentableEmployee(name: "Employee middleName lastName", designation: "designation little large", salary: "3")
-        ]
+}
+
+func anyURL() -> URL {
+    return URL(string: "http://any-url.com")!
+}
+
+func employeesCellControllers() -> [EmployeesListCellController] {
+    return [
+        EmployeesListCellController(loader: ImageLoaderSpy(), employee: PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1", url: anyURL())),
+        EmployeesListCellController(loader: ImageLoaderSpy(), employee:PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2", url: anyURL())),
+        EmployeesListCellController(loader: ImageLoaderSpy(), employee:PresentableEmployee(name: "Employee middleName lastName", designation: "designation little large", salary: "3", url: anyURL()))
+    ]
+}
+
+class ImageLoaderSpy: ImageLoader {
+    func loadImage() {
     }
 }
+
 
 

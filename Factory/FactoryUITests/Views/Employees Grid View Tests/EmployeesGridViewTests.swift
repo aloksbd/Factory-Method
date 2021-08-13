@@ -24,7 +24,7 @@ class EmployeesGridViewTests: XCTestCase {
         let sut = EmployeesGridView()
         XCTAssertEqual(sut.numberOfRenderedEmployees(), 0)
         
-        sut.displayEmployees(employees)
+        sut.displayEmployees(EmployeesViewModel(employees: employees))
         
         XCTAssertEqual(sut.numberOfRenderedEmployees(), employees.count)
         
@@ -39,7 +39,7 @@ class EmployeesGridViewTests: XCTestCase {
     }
     
     private func makeEmployee(name: String, designation: String, salary: String) -> PresentableEmployee {
-        return PresentableEmployee(name: name, designation: designation, salary: salary)
+        return PresentableEmployee(name: name, designation: designation, salary: salary, url: anyURL())
     }
 
 }

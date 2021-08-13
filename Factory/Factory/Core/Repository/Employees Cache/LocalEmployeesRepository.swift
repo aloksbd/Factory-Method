@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LocalEmployeesRepository {
+final class LocalEmployeesRepository: EmployeesRepository {
     private let store: EmployeesStore
     private let currentDate: () -> Date
     
