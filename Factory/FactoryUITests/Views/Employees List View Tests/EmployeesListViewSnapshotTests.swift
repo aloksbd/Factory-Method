@@ -29,6 +29,7 @@ class EmployeesListViewSnapshotTests: XCTestCase {
 
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .light)), named: "EMPLOYEES_LIST_light")
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .dark)), named: "EMPLOYEES_LIST_dark")
+        assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .light, size: .extraExtraExtraLarge)), named: "EMPLOYEES_LIST_dynamic")
     }
     
     private func emptyEmployees() -> [PresentableEmployee] {
@@ -39,7 +40,7 @@ class EmployeesListViewSnapshotTests: XCTestCase {
         return [
             PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1"),
             PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2"),
-            PresentableEmployee(name: "Employee 3", designation: "designation 3", salary: "3")
+            PresentableEmployee(name: "Employee middleName lastName", designation: "designation little large", salary: "3")
         ]
     }
 }

@@ -8,14 +8,27 @@
 import UIKit
 
 final class EmployeeListCell: UITableViewCell {
-    private(set) lazy var nameLabel = UILabel()
-    private(set) lazy var designationLabel = UILabel()
+    private(set) lazy var nameLabel = UILabel.dynamicLabel(forTextStyle: .headline)
+    private(set) lazy var designationLabel: UILabel = {
+        let label = UILabel.dynamicLabel()
+        label.textAlignment = .right
+        return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, designationLabel])
+        stackView.axis = .horizontal
+        stackView.alignment = .top
+        stackView.distribution = .fillProportionally
+        return stackView
+    }()
+    
     private lazy var salaryTitleLabel: UILabel = {
-        let label = UILabel()
+        let label = UILabel.dynamicLabel()
         label.text = "Salary: "
         return label
     }()
-    private(set) lazy var salaryLabel = UILabel()
+    private(set) lazy var salaryLabel = UILabel.dynamicLabel()
     
     private lazy var view: UIView = {
         let view = UIView()
@@ -34,7 +47,7 @@ final class EmployeeListCell: UITableViewCell {
     }
     
     private func addViews() {
-        [nameLabel, designationLabel, salaryTitleLabel, salaryLabel].forEach {
+        [stackView, salaryTitleLabel, salaryLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -43,17 +56,15 @@ final class EmployeeListCell: UITableViewCell {
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
-            nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
             
-            designationLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 4),
-            designationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
-            
-            salaryTitleLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            salaryTitleLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
             salaryTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
             salaryTitleLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -4),
             
-            salaryLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            salaryLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
             salaryLabel.leadingAnchor.constraint(equalTo: salaryTitleLabel.trailingAnchor),
             
             view.topAnchor.constraint(equalTo: topAnchor),
@@ -65,5 +76,15 @@ final class EmployeeListCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension UILabel {
+    static func dynamicLabel(forTextStyle textStyle: UIFont.TextStyle = .body) -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont.preferredFont(forTextStyle: textStyle)
+        label.adjustsFontForContentSizeCategory = true
+        return label
     }
 }
