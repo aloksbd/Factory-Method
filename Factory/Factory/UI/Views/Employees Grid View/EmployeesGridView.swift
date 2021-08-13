@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EmployeesGridView: NSObject, EmployeesView {
+final class EmployeesGridView: NSObject, EmployeesLayoutView, EmployeesView {
     private(set) lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -26,8 +26,8 @@ final class EmployeesGridView: NSObject, EmployeesView {
         }
     }
     
-    func displayEmployees(_ employees: [PresentableEmployee]) {
-        self.employees = employees
+    func displayEmployees(_ employees: EmployeesViewModel) {
+        self.employees = employees.employees
     }
     
     func getView() -> UIView {

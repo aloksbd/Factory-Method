@@ -8,6 +8,9 @@
 import UIKit
 
 protocol EmployeesView {
-    func displayEmployees(_ employees: [PresentableEmployee])
+    func displayEmployees(_ employeesViewModel: EmployeesViewModel)
+}
+
+protocol EmployeesLayoutView {
     func getView() -> UIView
 }

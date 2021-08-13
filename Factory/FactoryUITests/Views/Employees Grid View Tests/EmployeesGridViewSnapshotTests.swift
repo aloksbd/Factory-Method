@@ -31,16 +31,16 @@ class EmployeesGridViewSnapshotTests: XCTestCase {
         assert(snapshot: containerViewController.snapshot(for: .iPhone8(style: .dark)), named: "EMPLOYEES_LIST_dark")
     }
     
-    private func emptyEmployees() -> [PresentableEmployee] {
-        return []
+    private func emptyEmployees() -> EmployeesViewModel {
+        return EmployeesViewModel(employees: [])
     }
     
-    private func employees() -> [PresentableEmployee] {
-        return [
-            PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1"),
-            PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2"),
-            PresentableEmployee(name: "Employee 3", designation: "designation 3", salary: "3")
-        ]
+    private func employees() -> EmployeesViewModel {
+        return EmployeesViewModel(employees: [
+            PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1", url: anyURL()),
+            PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2", url: anyURL()),
+            PresentableEmployee(name: "Employee 3", designation: "designation 3", salary: "3", url: anyURL())
+        ])
     }
 }
 

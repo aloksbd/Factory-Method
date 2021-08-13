@@ -27,22 +27,26 @@ class EmployeesViewControllerIntegrationTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         let views = sut.view.subviews
-        guard let _ = views[0] as? UICollectionView else {
-            return XCTFail("Should create EmployeesGridView")
+        guard let _ = views[0] as? UITableView else {
+            return XCTFail("Should create EmployeesListView")
         }
     }
     
     private func makeSut() -> (sut: EmployeesViewController, repository: EmployeesRepositorySpy) {
         let repository = EmployeesRepositorySpy()
-        let sut = EmployeesViewComposer.createEmployeesViewController(setting: .grid, repository: repository)
+        let sut = EmployeesViewComposer.createEmployeesViewController(setting: .list, repository: repository, imageLoader: EmployeeImageDataLoaderSpy())
         
         return (sut, repository)
     }
 }
 
+private class EmployeeImageDataLoaderSpy: EmployeeImageDataLoader {
+    func loadImageData(from url: URL, completion: @escaping (EmployeeImageDataLoader.Result) -> Void) { }
+}
+
 private class EmployeesRepositorySpy: EmployeesRepository {
     var loadCallCount = 0
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
         loadCallCount += 1
     }
 }

@@ -32,6 +32,36 @@
 		5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */; };
 		5C94255D26C04C1F00C9996C /* EmployeesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94254126C0324E00C9996C /* EmployeesViewControllerTests.swift */; };
 		5C94255F26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */; };
+		5C9ED4F026C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */; };
+		5C9ED4F426C3A81000AED8E4 /* LocalEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */; };
+		5C9ED4F626C3ABB000AED8E4 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F526C3ABB000AED8E4 /* Employee.swift */; };
+		5C9ED4F826C3F65E00AED8E4 /* EmployeesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */; };
+		5C9ED4FA26C3F69700AED8E4 /* EmployeesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4F926C3F69700AED8E4 /* EmployeesCache.swift */; };
+		5C9ED4FC26C3F76000AED8E4 /* EmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4FB26C3F76000AED8E4 /* EmployeesRepository.swift */; };
+		5C9ED4FE26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED4FD26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift */; };
+		5C9ED50126C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED50026C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift */; };
+		5C9ED50326C52F4800AED8E4 /* EmployeesCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9ED50226C52F4800AED8E4 /* EmployeesCachePolicy.swift */; };
+		5CDC0A0526C6384900F7716B /* CoreDataEmployeesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0426C6384900F7716B /* CoreDataEmployeesStoreTests.swift */; };
+		5CDC0A0826C63D7500F7716B /* CoreDataEmployeesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0726C63D7500F7716B /* CoreDataEmployeesStore.swift */; };
+		5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0926C63F8200F7716B /* EmployeesStore.xcdatamodeld */; };
+		5CDC0A0D26C6421F00F7716B /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0C26C6421F00F7716B /* ManagedCache.swift */; };
+		5CDC0A0F26C6425900F7716B /* ManagedEmployees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */; };
+		5CDC0A1226C6494100F7716B /* RemoteEmployeesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */; };
+		5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */; };
+		5CDC0A1726C64AD200F7716B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1626C64AD200F7716B /* HTTPClient.swift */; };
+		5CDC0A1926C64BD800F7716B /* EmployeesItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */; };
+		5CDC0A1B26C651B000F7716B /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */; };
+		5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */; };
+		5CDC0A2026C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */; };
+		5CDC0A2226C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */; };
+		5CDC0A2426C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */; };
+		5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */; };
+		5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */; };
+		5CDC0A2A26C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */; };
+		5CDC0A2C26C68C5800F7716B /* EmployeeImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */; };
+		5CDC0A2E26C68CA000F7716B /* EmployeeImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */; };
+		5CDC0A3126C6BFA200F7716B /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */; };
+		5CDC0A3326C6C1DC00F7716B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +122,36 @@
 		5C94255326C04BAA00C9996C /* FactoryMainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryMainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C94255726C04BAA00C9996C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEmployeesFromUseCaseTests.swift; sourceTree = "<group>"; };
+		5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesRepository.swift; sourceTree = "<group>"; };
+		5C9ED4F526C3ABB000AED8E4 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesStore.swift; sourceTree = "<group>"; };
+		5C9ED4F926C3F69700AED8E4 /* EmployeesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesCache.swift; sourceTree = "<group>"; };
+		5C9ED4FB26C3F76000AED8E4 /* EmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesRepository.swift; sourceTree = "<group>"; };
+		5C9ED4FD26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEmployeesFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
+		5C9ED50026C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		5C9ED50226C52F4800AED8E4 /* EmployeesCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesCachePolicy.swift; sourceTree = "<group>"; };
+		5CDC0A0426C6384900F7716B /* CoreDataEmployeesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEmployeesStoreTests.swift; sourceTree = "<group>"; };
+		5CDC0A0726C63D7500F7716B /* CoreDataEmployeesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEmployeesStore.swift; sourceTree = "<group>"; };
+		5CDC0A0A26C63F8200F7716B /* EmployeesStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmployeesStore.xcdatamodel; sourceTree = "<group>"; };
+		5CDC0A0C26C6421F00F7716B /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
+		5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEmployees.swift; sourceTree = "<group>"; };
+		5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesRepositoryTests.swift; sourceTree = "<group>"; };
+		5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesRepository.swift; sourceTree = "<group>"; };
+		5CDC0A1626C64AD200F7716B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesItemsMapper.swift; sourceTree = "<group>"; };
+		5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmplyeesImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteEmployeesImageDataLoader.swift; sourceTree = "<group>"; };
+		5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEmployeesImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
+		5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEmployeesImageDataLoader.swift; sourceTree = "<group>"; };
+		5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEmployeesImageDataUseCaseTests.swift; sourceTree = "<group>"; };
+		5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEmployeeImageDataStoreTests.swift; sourceTree = "<group>"; };
+		5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeImagePresenterTests.swift; sourceTree = "<group>"; };
+		5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeImagePresenter.swift; sourceTree = "<group>"; };
+		5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +214,7 @@
 		5C720CBF26BFEEC700C2F4A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC0A2F26C6BF7F00F7716B /* Employees Detail View */,
 				5C94254526C03ACC00C9996C /* Employees View Factory */,
 				5C720CC526BFF0A300C2F4A4 /* Employees Grid View */,
 				5C720CBC26BFEE8900C2F4A4 /* Employees List View */,
@@ -246,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				5C94252F26C0190900C9996C /* EmployeesPresenter.swift */,
+				5CDC0A2D26C68CA000F7716B /* EmployeeImagePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -253,8 +315,12 @@
 		5C94253626C0193600C9996C /* FactoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC0A1026C6491A00F7716B /* Employees Api */,
+				5C9ED4FF26C3F8B000AED8E4 /* Helpers */,
+				5C9ED4EE26C3A46700AED8E4 /* EmployeesCache */,
 				5C94253726C0193600C9996C /* EmployeesPresenterTests.swift */,
 				5C94253926C0193600C9996C /* Info.plist */,
+				5CDC0A2B26C68C5800F7716B /* EmployeeImagePresenterTests.swift */,
 			);
 			path = FactoryTests;
 			sourceTree = "<group>";
@@ -275,6 +341,7 @@
 				5C82107B26BFA017006F62A6 /* Assets.xcassets */,
 				5C82107D26BFA017006F62A6 /* LaunchScreen.storyboard */,
 				5C94254D26C047BA00C9996C /* EmployeesViewComposer.swift */,
+				5CDC0A3226C6C1DC00F7716B /* Coordinator.swift */,
 			);
 			path = "Main App";
 			sourceTree = "<group>";
@@ -282,8 +349,12 @@
 		5C94254B26C0456900C9996C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5C9ED4F126C3A7D500AED8E4 /* Repository */,
 				5C94252E26C018F400C9996C /* Presenters */,
 				5C94254826C03B0700C9996C /* Settings.swift */,
+				5C9ED4F526C3ABB000AED8E4 /* Employee.swift */,
+				5C9ED4F926C3F69700AED8E4 /* EmployeesCache.swift */,
+				5C9ED4FB26C3F76000AED8E4 /* EmployeesRepository.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -331,6 +402,97 @@
 				5C94255E26C04CAB00C9996C /* EmployeesViewControllerSnapshotTests.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C9ED4EE26C3A46700AED8E4 /* EmployeesCache */ = {
+			isa = PBXGroup;
+			children = (
+				5C9ED4EF26C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift */,
+				5C9ED4FD26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift */,
+				5CDC0A0426C6384900F7716B /* CoreDataEmployeesStoreTests.swift */,
+				5CDC0A2326C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift */,
+				5CDC0A2726C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift */,
+				5CDC0A2926C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift */,
+			);
+			path = EmployeesCache;
+			sourceTree = "<group>";
+		};
+		5C9ED4F126C3A7D500AED8E4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1326C64A6900F7716B /* Employees Api */,
+				5C9ED4F226C3A7DD00AED8E4 /* Employees Cache */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5C9ED4F226C3A7DD00AED8E4 /* Employees Cache */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A0626C63D5F00F7716B /* CoreData */,
+				5C9ED4F326C3A81000AED8E4 /* LocalEmployeesRepository.swift */,
+				5C9ED4F726C3F65E00AED8E4 /* EmployeesStore.swift */,
+				5C9ED50226C52F4800AED8E4 /* EmployeesCachePolicy.swift */,
+				5CDC0A2526C67CA200F7716B /* LocalEmployeesImageDataLoader.swift */,
+			);
+			path = "Employees Cache";
+			sourceTree = "<group>";
+		};
+		5C9ED4FF26C3F8B000AED8E4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5C9ED50026C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5CDC0A0626C63D5F00F7716B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A0726C63D7500F7716B /* CoreDataEmployeesStore.swift */,
+				5CDC0A0926C63F8200F7716B /* EmployeesStore.xcdatamodeld */,
+				5CDC0A0C26C6421F00F7716B /* ManagedCache.swift */,
+				5CDC0A0E26C6425900F7716B /* ManagedEmployees.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5CDC0A1026C6491A00F7716B /* Employees Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1126C6494100F7716B /* RemoteEmployeesRepositoryTests.swift */,
+				5CDC0A1A26C651B000F7716B /* URLSessionHTTPClientTests.swift */,
+				5CDC0A1F26C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift */,
+			);
+			path = "Employees Api";
+			sourceTree = "<group>";
+		};
+		5CDC0A1326C64A6900F7716B /* Employees Api */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1C26C6529700F7716B /* URLSession */,
+				5CDC0A1426C64A7500F7716B /* RemoteEmployeesRepository.swift */,
+				5CDC0A2126C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift */,
+				5CDC0A1626C64AD200F7716B /* HTTPClient.swift */,
+				5CDC0A1826C64BD800F7716B /* EmployeesItemsMapper.swift */,
+			);
+			path = "Employees Api";
+			sourceTree = "<group>";
+		};
+		5CDC0A1C26C6529700F7716B /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A1D26C652AB00F7716B /* URLSessionHTTPClient.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		5CDC0A2F26C6BF7F00F7716B /* Employees Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC0A3026C6BFA200F7716B /* EmployeeDetailView.swift */,
+			);
+			path = "Employees Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,18 +655,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C94254726C03ADE00C9996C /* EmployeesViewFactory.swift in Sources */,
+				5CDC0A1726C64AD200F7716B /* HTTPClient.swift in Sources */,
+				5C9ED50326C52F4800AED8E4 /* EmployeesCachePolicy.swift in Sources */,
+				5CDC0A0D26C6421F00F7716B /* ManagedCache.swift in Sources */,
 				5C82109526BFACBF006F62A6 /* EmployeesListView.swift in Sources */,
 				5C720CBB26BFD96700C2F4A4 /* EmployeeListCell.swift in Sources */,
 				5C94254E26C047BA00C9996C /* EmployeesViewComposer.swift in Sources */,
 				5C94254026C02BC900C9996C /* EmployeesView.swift in Sources */,
+				5CDC0A1E26C652AB00F7716B /* URLSessionHTTPClient.swift in Sources */,
+				5CDC0A2226C6777E00F7716B /* RemoteEmployeesImageDataLoader.swift in Sources */,
+				5CDC0A2E26C68CA000F7716B /* EmployeeImagePresenter.swift in Sources */,
+				5CDC0A3126C6BFA200F7716B /* EmployeeDetailView.swift in Sources */,
 				5C82107726BFA013006F62A6 /* EmployeesViewController.swift in Sources */,
+				5CDC0A2626C67CA200F7716B /* LocalEmployeesImageDataLoader.swift in Sources */,
+				5CDC0A0B26C63F8200F7716B /* EmployeesStore.xcdatamodeld in Sources */,
+				5CDC0A1526C64A7500F7716B /* RemoteEmployeesRepository.swift in Sources */,
+				5CDC0A3326C6C1DC00F7716B /* Coordinator.swift in Sources */,
 				5C720CC726BFF0BC00C2F4A4 /* EmployeesGridView.swift in Sources */,
 				5C94254926C03B0700C9996C /* Settings.swift in Sources */,
 				5C82107326BFA013006F62A6 /* AppDelegate.swift in Sources */,
+				5CDC0A0826C63D7500F7716B /* CoreDataEmployeesStore.swift in Sources */,
+				5C9ED4FA26C3F69700AED8E4 /* EmployeesCache.swift in Sources */,
 				5C82109726BFB1EB006F62A6 /* PresentableEmployee.swift in Sources */,
+				5C9ED4FC26C3F76000AED8E4 /* EmployeesRepository.swift in Sources */,
 				5C82107526BFA013006F62A6 /* SceneDelegate.swift in Sources */,
+				5CDC0A0F26C6425900F7716B /* ManagedEmployees.swift in Sources */,
+				5C9ED4F426C3A81000AED8E4 /* LocalEmployeesRepository.swift in Sources */,
 				5C94253026C0190900C9996C /* EmployeesPresenter.swift in Sources */,
+				5C9ED4F626C3ABB000AED8E4 /* Employee.swift in Sources */,
 				5C720CC926BFF1BF00C2F4A4 /* EmployeeGridCell.swift in Sources */,
+				5C9ED4F826C3F65E00AED8E4 /* EmployeesStore.swift in Sources */,
+				5CDC0A1926C64BD800F7716B /* EmployeesItemsMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +708,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDC0A1B26C651B000F7716B /* URLSessionHTTPClientTests.swift in Sources */,
 				5C94253826C0193600C9996C /* EmployeesPresenterTests.swift in Sources */,
+				5CDC0A1226C6494100F7716B /* RemoteEmployeesRepositoryTests.swift in Sources */,
+				5C9ED50126C4270C00AED8E4 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				5CDC0A0526C6384900F7716B /* CoreDataEmployeesStoreTests.swift in Sources */,
+				5CDC0A2426C67C1900F7716B /* LoadEmployeesImageDataFromCacheUseCaseTests.swift in Sources */,
+				5CDC0A2A26C6811900F7716B /* CoreDataEmployeeImageDataStoreTests.swift in Sources */,
+				5C9ED4FE26C3F7FA00AED8E4 /* LoadEmployeesFromCacheUseCaseTests.swift in Sources */,
+				5CDC0A2026C6770100F7716B /* RemoteEmplyeesImageDataLoaderTests.swift in Sources */,
+				5CDC0A2826C6800800F7716B /* CacheEmployeesImageDataUseCaseTests.swift in Sources */,
+				5CDC0A2C26C68C5800F7716B /* EmployeeImagePresenterTests.swift in Sources */,
+				5C9ED4F026C3A4AA00AED8E4 /* CacheEmployeesFromUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +1086,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5CDC0A0926C63F8200F7716B /* EmployeesStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5CDC0A0A26C63F8200F7716B /* EmployeesStore.xcdatamodel */,
+			);
+			currentVersion = 5CDC0A0A26C63F8200F7716B /* EmployeesStore.xcdatamodel */;
+			path = EmployeesStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C82106726BFA013006F62A6 /* Project object */;
 }

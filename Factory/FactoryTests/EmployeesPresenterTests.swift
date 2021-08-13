@@ -9,49 +9,58 @@ import XCTest
 @testable import Factory
 
 class EmployeesPresenterTests: XCTestCase {
-    func test_init_doesNotLoadEmployeesFromRepository() {
-        let(_, repository, _) = makeSut()
+    
+    func test_init_doesNotSendMessagesToView() {
+        let (_, view) = makeSUT()
         
-        XCTAssertEqual(repository.loadCallCount, 0)
+        XCTAssertTrue(view.messages.isEmpty)
     }
     
-    func test_loadEmployees_makesCallToLoadEmployeesFromRepository() {
-        let(sut, repository, _) = makeSut()
+    func test_didStartLoadingFeed_displaysNoErrorMessageAndStartsLoading() {
+        let (sut, view) = makeSUT()
         
-        sut.loadEmployees()
-        XCTAssertEqual(repository.loadCallCount, 1)
+        sut.didStartLoadingEmployees()
         
-        sut.loadEmployees()
-        XCTAssertEqual(repository.loadCallCount, 2)
+        XCTAssertEqual(view.messages, [
+            .display(errorMessage: nil),
+            .display(isLoading: true)
+        ])
     }
     
-    func test_init_doesNotSendMessagesToViews() {
-        let(_, _, view) = makeSut()
+    func test_didFinishLoadingFeed_displaysFeedAndStopsLoading() {
+        let (sut, view) = makeSUT()
+        let employees = uniqueEmployees()
         
-        XCTAssertEqual(view.messages, [])
+        sut.didFinishLoadingEmployees(with: employees.employees)
+        
+        XCTAssertEqual(view.messages, [
+            .display(employees: employees.presentableEmployeees),
+            .display(isLoading: false)
+        ])
     }
     
-    func test_loadEmployees_displaysEmployees() {
-        let(sut, repository, view) = makeSut()
+    func test_didFinishLoadingFeedWithError_displaysLocalizedErrorMessageAndStopsLoading() {
+        let (sut, view) = makeSUT()
+        let anyError = anyNSError()
         
-        let employee = PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1")
+        sut.didFinishLoadingEmployees(with: anyError)
         
-        sut.loadEmployees()
-        repository.complete(with: [employee])
-        
-        XCTAssertEqual(view.messages, [.display(employees: [employee])])
+        XCTAssertEqual(view.messages, [
+            .display(errorMessage: anyError.localizedDescription),
+            .display(isLoading: false)
+        ])
     }
     
-    private func makeSut() -> (sut: EmployeesPresenter, repository: EmployeesRepositorySpy, view: ViewSpy) {
-        let repository = EmployeesRepositorySpy()
+    private func makeSUT() -> (sut: EmployeesPresenter, view: ViewSpy) {
         let view = ViewSpy()
-        let sut = EmployeesPresenter(repository: repository, employeesView: view)
+        let sut = EmployeesPresenter(employeesView: view, loadingView: view, errorView: view)
         
-        return (sut, repository, view)
+        return (sut, view)
     }
 }
 
-private class ViewSpy: EmployeesView {
+private class ViewSpy: EmployeesView, EmployeesLoadingView, EmployeesErrorView {
+    
     func getView() -> UIView {
         return UIView()
     }
@@ -60,10 +69,23 @@ private class ViewSpy: EmployeesView {
     
     enum Message: Equatable {
         case display(employees: [PresentableEmployee])
+        case display(errorMessage: String?)
+        case display(isLoading: Bool)
     }
     
     func displayEmployees(_ employees: [PresentableEmployee]) {
-        messages.append(.display(employees: employees))
+        
+    }
+    func displayEmployees(_ employeesViewModel: EmployeesViewModel) {
+        messages.append(.display(employees: employeesViewModel.employees))
+    }
+    
+    func display(_ viewModel: EmployeesLoadingViewModel) {
+        messages.append(.display(isLoading: viewModel.isLoading))
+    }
+    
+    func display(_ viewModel: EmployeesErrorViewModel) {
+        messages.append(.display(errorMessage: viewModel.message))
     }
 }
 
@@ -71,13 +93,13 @@ private class EmployeesRepositorySpy: EmployeesRepository {
     var loadCallCount: Int {
         completions.count
     }
-    private var completions = [([PresentableEmployee]) -> Void]()
+    private var completions = [(EmployeesRepository.Result) -> Void]()
     
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) {
         completions.append(completion)
     }
     
-    func complete(with employees: [PresentableEmployee], at index: Int = 0) {
-        completions[index](employees)
+    func complete(with employees: [Employee], at index: Int = 0) {
+        completions[index](.success(employees))
     }
 }

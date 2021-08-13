@@ -10,26 +10,22 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator: MainCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
+        
+        let navController = UINavigationController()
+        
+        coordinator = MainCoordinator(navigationController: navController)
     
+        coordinator?.start()
+        
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(
-            rootViewController: EmployeesViewComposer.createEmployeesViewController(setting: .list, repository: Repository()))
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
         
         window?.makeKeyAndVisible()
     }
+    
 }
-
-final private class Repository: EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
-        completion([
-            PresentableEmployee(name: "Employee 1", designation: "designation 1", salary: "1"),
-            PresentableEmployee(name: "Employee 2", designation: "designation 2", salary: "2"),
-            PresentableEmployee(name: "Employee 3", designation: "designation 3", salary: "3")
-        ])
-    }
-}
-

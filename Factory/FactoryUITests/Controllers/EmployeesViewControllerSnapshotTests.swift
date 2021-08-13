@@ -11,8 +11,7 @@ import XCTest
 class EmployeesViewControllerSnapshotTests: XCTestCase {
     func test_withEmployeesViewSpy() {
         let view = EmployeesViewSpy()
-        let presenter = EmployeesPresenter(repository: RepositorySpy(), employeesView: view)
-        let sut = EmployeesViewController(presenter: presenter, employeesView: view)
+        let sut = EmployeesViewController(loader: LoaderSpy(), employeesView: view)
         sut.loadViewIfNeeded()
 
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "EmployeesViewController_light")
@@ -21,17 +20,17 @@ class EmployeesViewControllerSnapshotTests: XCTestCase {
 }
 
 private class RepositorySpy: EmployeesRepository {
-    func load(completion: @escaping ([PresentableEmployee]) -> Void) {
-        completion([])
-    }
+    func load(completion: @escaping (EmployeesRepository.Result) -> Void) { }
 }
 
-private class EmployeesViewSpy: EmployeesView {
-    func displayEmployees(_ employees: [PresentableEmployee]) {}
-    
+private class EmployeesViewSpy: EmployeesLayoutView {
     func getView() -> UIView {
         let view = UIView()
         view.backgroundColor = .systemGray4
         return view
     }
+}
+
+private class LoaderSpy: EmployeesLoader {
+    func load() {}
 }

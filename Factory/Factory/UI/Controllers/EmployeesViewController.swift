@@ -7,13 +7,18 @@
 
 import UIKit
 
-final class EmployeesViewController: UIViewController {
-    private var presenter: EmployeesPresenter!
-    private var employeesView: UIView!
+protocol EmployeesLoader {
+    func load()
+}
+
+final class EmployeesViewController: UIViewController, EmployeesLoadingView, EmployeesErrorView {
     
-    convenience init(presenter: EmployeesPresenter, employeesView: EmployeesView) {
+    private var employeesView: UIView!
+    private var loader: EmployeesLoader!
+    
+    convenience init(loader: EmployeesLoader, employeesView: EmployeesLayoutView) {
         self.init()
-        self.presenter = presenter
+        self.loader = loader
         self.employeesView = employeesView.getView()
         self.employeesView.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -21,7 +26,7 @@ final class EmployeesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.loadEmployees()
+        self.loader.load()
         view.addSubview(employeesView)
         addConstraints()
     }
@@ -34,6 +39,13 @@ final class EmployeesViewController: UIViewController {
             employeesView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
-
+    
+    func display(_ viewModel: EmployeesLoadingViewModel) {
+        // TODO: loading view
+    }
+    
+    func display(_ viewModel: EmployeesErrorViewModel) {
+        // TODO: error View
+    }
 }
 
